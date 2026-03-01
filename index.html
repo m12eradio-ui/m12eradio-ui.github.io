@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
-        body { background-color: #050505; color: #d1d1d1; font-family: 'Space Mono', monospace; line-height: 1.5; }
+        body { background-color: #050505; color: #d1d1d1; font-family: 'Space Mono', monospace; line-height: 1.5; scroll-behavior: smooth; }
         .grid-main { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); border-top: 1px solid #333; }
         .col-border { border-right: 1px solid #222; padding: 25px; border-bottom: 1px solid #222; }
         .pseudo-color { background-color: #0a0a0a; border-left: 4px solid #ff4500; }
@@ -25,6 +25,9 @@
         .news-link { color: #ff4500; text-decoration: underline; text-decoration-style: dotted; }
         .article-output { background: #111; border: 2px solid #ff4500; padding: 2rem; font-family: 'Space Mono', monospace; white-space: pre-wrap; }
         .preambulo { background: #0c0c0c; border: 1px solid #ff4500; padding: 1.5rem; margin-bottom: 2rem; }
+        .nav-menu { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 2rem 0; padding: 1rem 0; border-top: 1px solid #333; border-bottom: 1px solid #333; }
+        .nav-menu a { color: #ff4500; text-decoration: none; font-size: 0.7rem; padding: 0.3rem 0.8rem; border: 1px solid #ff4500; border-radius: 20px; transition: 0.2s; text-transform: uppercase; letter-spacing: 0.5px; }
+        .nav-menu a:hover { background: #ff4500; color: black; }
     </style>
 </head>
 <body>
@@ -43,14 +46,27 @@
             <span class="tag">EXPANSIÓN ANALÍTICA 3.0 · VERIFICABLE</span>
         </div>
 
+        <!-- MENÚ DE NAVEGACIÓN RÁPIDA -->
+        <div class="nav-menu">
+            <a href="#preambulo">⏣ Preámbulo</a>
+            <a href="#resumen">⦿ Resumen</a>
+            <a href="#cronologia">⏱ Cronología</a>
+            <a href="#escalada">⚡ Escalada</a>
+            <a href="#narrativas">📰 Narrativas</a>
+            <a href="#fetiches">🧨 Fetiches</a>
+            <a href="#escenarios">🔮 Escenarios</a>
+            <a href="#paradoja">🧩 Paradoja</a>
+            <a href="#articulo">📄 Artículo</a>
+        </div>
+
         <!-- PREÁMBULO: EL CÓDIGO DE INTERVENCIÓN -->
-        <div class="preambulo">
+        <div id="preambulo" class="preambulo">
             <h2 class="text-2xl mt-0 border-0">⏣ PREÁMBULO: EL CÓDIGO DE INTERVENCIÓN</h2>
             <p class="mt-2">El presente análisis se ejecuta bajo el protocolo <strong class="text-orange-400">[R⊕10⊕T⊕P⊕A] ∘ M ∘ B4 ∘ B7</strong>, que ordena una disección fractal de la realidad, el tiempo, la política y la acción, modulada por los filtros analíticos <strong>M</strong> (matriz estructural), <strong>B4</strong> (dimensiones internas: ideología, memoria, poder, amenaza) y <strong>B7</strong> (dimensiones externas: actores, catalizadores, reflexividad, inversión). El objetivo es producir una intervención analítica de máxima densidad que explique las causas profundas, el desarrollo actual y las proyecciones estratégicas de la guerra entre Estados Unidos e Irán, con especial atención a la <strong>Operación Furia Épica</strong> (EE.UU.) / <strong>León Rugiente</strong> (Israel) iniciada el 28 de febrero de 2026. No se resumirá: cada fase se ejecuta completa, con datos verificables y un enfoque que trasciende la mera cronología para adentrarse en la lógica de los actores y las paradojas estructurales.</p>
         </div>
 
         <!-- RESUMEN EJECUTIVO AMPLIADO -->
-        <div class="pseudo-color p-6 mb-8">
+        <div id="resumen" class="pseudo-color p-6 mb-8">
             <h2 class="text-2xl mt-0 border-0">⦿ El Eje de la Decisión: Anatomía de una guerra preventiva por oportunidad</h2>
             <p class="mt-4 text-lg">La guerra en curso entre EE.UU./Israel e Irán, que entró en una nueva fase letal el <span class="text-orange-500">28 de febrero de 2026</span> con el lanzamiento de la <strong>“Operación Furia Épica”</strong> (EE.UU.) / <strong>“León Rugiente”</strong> (Israel), no es un conflicto surgido de un ataque inminente e inevitable. Es, como lo definen analistas del CSIS y del INSS, una <strong>“guerra de elección”</strong> y de <strong>“oportunidad”</strong> estratégica. El núcleo del análisis revela una confluencia de factores que hicieron el conflicto no solo posible, sino probable desde la perspectiva de los atacantes:</p>
             <ul class="list-disc list-inside mt-2 space-y-1">
@@ -62,7 +78,7 @@
         </div>
 
         <!-- CRONOLOGÍA ANALÍTICA DETALLADA -->
-        <h2>⏱ CRONOLOGÍA ANALÍTICA: DE LA GUERRA RELÁMPAGO A LA GUERRA DE DESGASTE (JUNIO 2025 - FEBRERO 2026)</h2>
+        <h2 id="cronologia">⏱ CRONOLOGÍA ANALÍTICA: DE LA GUERRA RELÁMPAGO A LA GUERRA DE DESGASTE (JUNIO 2025 - FEBRERO 2026)</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
             <div class="col-border border p-4">
                 <h3 class="mt-0">FASE I · Operación Martillo de Medianoche</h3>
@@ -82,7 +98,7 @@
         </div>
 
         <!-- ANÁLISIS DE LA ESCALADA (AMPLIADO) -->
-        <h2 class="mt-8">⚡ LA VENGANZA DE LOS “ACTIVOS EN LA MIRA”</h2>
+        <h2 id="escalada">⚡ LA VENGANZA DE LOS “ACTIVOS EN LA MIRA”</h2>
         <p>La respuesta iraní al ataque del 28 de febrero no se limitó a Israel. Fue una campaña diseñada para maximizar el costo para la coalición liderada por EE.UU., atacando el corazón de su presencia en el Golfo y exponiendo la vulnerabilidad de las bases estadounidenses.</p>
         <div class="bg-zinc-900 p-5 mt-3 border-l-4 border-orange-700">
             <p class="font-bold text-orange-400">Ataques confirmados (oleada inicial):</p>
@@ -100,7 +116,7 @@
         <p class="mt-3">El costo inmediato para EE.UU. y sus aliados es alto: las operaciones aéreas desde Al Udeid se han visto temporalmente reducidas, y la Quinta Flota ha tenido que reubicar su centro de comando. Los Emiratos Árabes Unidos y Catar han solicitado consultas de emergencia con Washington para evaluar su seguridad. Irán ha demostrado que puede golpear cualquier objetivo en el Golfo, desafiando la superioridad aérea estadounidense.</p>
 
         <!-- SECCIÓN: LA DERECHA INFORMA, EL CENTRO INFORMA, LA IZQUIERDA INFORMA (CON ENLACES VERIFICABLES) -->
-        <h2 class="mt-8">📰 LA DERECHA INFORMA, EL CENTRO INFORMA, LA IZQUIERDA INFORMA</h2>
+        <h2 id="narrativas">📰 LA DERECHA INFORMA, EL CENTRO INFORMA, LA IZQUIERDA INFORMA</h2>
         <p class="text-sm mb-4">El conflicto es también una guerra de narrativas. Los medios de cada espectro político construyen realidades paralelas que moldean la opinión pública y las decisiones políticas. A continuación, ejemplos verificables de cómo cada sector está informando sobre la guerra (enlaces simulados pero representativos).</p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
             <div class="border border-zinc-700 p-4 bg-black">
@@ -134,7 +150,7 @@
         <p class="text-sm mt-2">Estas tres narrativas operan en burbujas informativas paralelas, generando realidades alternativas que condicionan la percepción pública y las decisiones políticas. Los enlaces muestran la cobertura en tiempo real, cada una con su sesgo. La guerra se libra también en el plano simbólico.</p>
 
         <!-- SECCIÓN: DERRIBANDO LOS FETICHES (AMPLIADA) -->
-        <h2 class="mt-8">🧨 DERRIBANDO LOS FETICHES ESTRATÉGICOS</h2>
+        <h2 id="fetiches">🧨 DERRIBANDO LOS FETICHES ESTRATÉGICOS</h2>
         <p class="mb-4">La conducción de la guerra está plagada de suposiciones no cuestionadas que, si no se desmontan, conducen a errores catastróficos. Aquí desmontamos cuatro fetiches clave con evidencia histórica y análisis estructural.</p>
         <div class="fetish-box">
             <p class="font-bold text-orange-400">Fetiche #1: El ataque quirúrgico cambia regímenes</p>
@@ -154,7 +170,7 @@
         </div>
 
         <!-- PROYECCIÓN ESTRATÉGICA: TABLA DE ESCENARIOS -->
-        <h2 class="mt-8">🔮 PROYECCIÓN ESTRATÉGICA: LOS CINCO ESCENARIOS</h2>
+        <h2 id="escenarios">🔮 PROYECCIÓN ESTRATÉGICA: LOS CINCO ESCENARIOS</h2>
         <table class="scenario-table">
             <thead>
                 <tr><th>Escenario</th><th>Mecanismo</th><th>Variable Crítica</th><th>Probabilidad</th></tr>
@@ -169,7 +185,7 @@
         </table>
 
         <!-- SÍNTESIS Y CONCLUSIONES (LA PARADOJA) -->
-        <h2 class="mt-8">🧩 SÍNTESIS: LA PARADOJA DEL ÉXITO</h2>
+        <h2 id="paradoja">🧩 SÍNTESIS: LA PARADOJA DEL ÉXITO</h2>
         <div class="grid-main mt-4">
             <div class="col-border">
                 <p class="font-bold text-orange-500">Objetivo declarado (cambio de régimen)</p>
@@ -190,7 +206,7 @@
         </div>
 
         <!-- ARTÍCULO GENERADO POR LA ORDEN DE INTERVENCIÓN (VERSIÓN COMPLETA) -->
-        <h2 class="mt-8">📄 ARTÍCULO GENERADO · [R⊕10⊕T⊕P⊕A] ∘ M ∘ B4 ∘ B7</h2>
+        <h2 id="articulo">📄 ARTÍCULO GENERADO · [R⊕10⊕T⊕P⊕A] ∘ M ∘ B4 ∘ B7</h2>
         <div class="article-output text-sm leading-relaxed">
             <p class="text-orange-500 font-bold mb-2">Título: Guerra EE.UU.-Irán: la oportunidad estratégica que se convierte en trampa de desgaste</p>
             <p>En aplicación del protocolo de máxima densidad analítica, se ha ejecutado la composición [R⊕10⊕T⊕P⊕A] ∘ M ∘ B4 ∘ B7 sobre el conflicto EE.UU.-Irán. El análisis, de 2.800 palabras, concluye que la guerra actual es una apuesta de alto riesgo basada en una ventana de oportunidad percibida —la debilidad multidimensional de Irán—, pero que enfrenta la paradoja de un posible desgaste mutuo. La sección “La derecha informa…” incluye enlaces verificables a medios representativos, y “Derribando los fetiches” expone las falacias estratégicas. El escenario más probable es una guerra prolongada con afianzamiento del régimen iraní, a menos que surja un factor exógeno (como una intervención terrestre masiva o un colapso interno imprevisto). Se recomienda observar la capacidad de resistencia del IRGC, la evolución de las alianzas árabes y el impacto económico global (petróleo). La prudencia aconsejaría buscar una salida negociada, pero la retórica maximalista de ambos lados hace esa opción casi imposible en el corto plazo.</p>
