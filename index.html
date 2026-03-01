@@ -3,195 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M12e | Nodo de Inteligencia · Edición Global</title>
+    <title>M12e | Nodo de Inteligencia · Edición México</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;700;900&display=swap');
         
-        body { 
-            background-color: #ffffff; 
-            color: #000000; 
-            font-family: 'Inter', sans-serif; 
-            line-height: 1.5;
+        /* ELIMINACIÓN DE CUALQUIER RASTRO OSCURO */
+        html, body {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
         }
 
-        /* Estilo tipográfico El País */
-        h1, h2, h3, h4 { font-family: 'Libre Baskerville', serif; font-weight: 700; color: #000000; }
-        
-        .masthead-border { border-bottom: 1px solid #000000; }
-        .nav-border { border-bottom: 4px double #000000; }
-        
-        /* Contenedor de Fotografía Principal */
-        .photo-container {
-            width: 100%;
-            margin: 1.5rem 0;
+        /* FUENTES ESTILO EL PAÍS */
+        h1, h2, h3, h4 {
+            font-family: 'Libre Baskerville', serif;
+            font-weight: 700;
+            color: #000000;
+            letter-spacing: -0.02em;
         }
-        .main-photo {
+
+        .masthead-title {
+            font-size: 4rem;
+            font-weight: 900;
+            font-style: italic;
+            letter-spacing: -0.05em;
+            line-height: 0.8;
+            text-align: center;
+        }
+
+        /* LÍNEAS DIVISORIAS */
+        .border-thin { border-bottom: 1px solid #000000; }
+        .border-double-elpais { border-bottom: 3px double #000000; }
+
+        /* SECCIÓN DE FOTO */
+        .photo-wrapper {
+            width: 100%;
+            margin: 20px 0;
+        }
+        .photo-main {
             width: 100%;
             height: auto;
-            max-height: 550px;
-            object-fit: cover;
             display: block;
         }
-        .photo-credit {
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            color: #666;
-            margin-top: 0.5rem;
-            letter-spacing: 0.05em;
+        .photo-caption {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            color: #404040;
+            padding-top: 8px;
+            line-height: 1.4;
         }
 
+        /* DETALLES EDITORIALES */
         .kicker {
-            color: #bf0000; /* Rojo editorial */
+            color: #bf0000; /* Rojo característico */
             text-transform: uppercase;
+            font-size: 12px;
             font-weight: 900;
-            font-size: 0.7rem;
-            letter-spacing: 0.1em;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
             display: block;
-            margin-bottom: 0.25rem;
         }
 
-        /* Capitular El País */
         .dropcap::first-letter {
             font-family: 'Libre Baskerville', serif;
             float: left;
-            font-size: 5rem;
-            line-height: 0.75;
-            padding-right: 10px;
-            padding-top: 5px;
+            font-size: 75px;
+            line-height: 60px;
+            padding-top: 4px;
+            padding-right: 8px;
+            padding-left: 3px;
             color: #000000;
         }
 
-        .article-lead {
+        .lead-text {
             font-family: 'Libre Baskerville', serif;
-            font-size: 1.35rem;
+            font-size: 20px;
             line-height: 1.3;
-            color: #333333;
-            margin-bottom: 1.5rem;
+            color: #222222;
+            margin-bottom: 20px;
+        }
+
+        /* NÚMEROS RANKING */
+        .rank-number {
+            font-family: 'Inter', sans-serif;
+            font-size: 32px;
+            font-weight: 900;
+            color: #e5e5e5;
+            margin-right: 15px;
         }
     </style>
 </head>
-<body>
+<body class="bg-white text-black">
 
-    <header class="max-w-7xl mx-auto px-4 pt-4">
-        <div class="masthead-border flex justify-between items-center pb-2">
-            <div class="flex gap-4 text-[10px] font-bold uppercase tracking-tighter">
-                <span class="border-r border-gray-300 pr-4">España</span>
-                <span class="text-black underline underline-offset-4">México</span>
-                <span>América</span>
+    <header class="max-w-6xl mx-auto px-4 mt-6">
+        <div class="flex justify-between items-end border-thin pb-2 mb-1">
+            <div class="flex gap-4 text-[10px] font-bold uppercase tracking-widest">
+                <span class="text-red-700">MÉXICO</span>
+                <span class="text-gray-400">ESPAÑA</span>
+                <span class="text-gray-400">AMÉRICA</span>
             </div>
-            <h1 class="text-6xl md:text-8xl font-black tracking-tighter italic leading-none text-center">M12e</h1>
-            <div class="text-[10px] uppercase font-bold text-right">
-                Sábado, 28 de Febrero de 2026
+            <div class="masthead-title">M12e</div>
+            <div class="text-[10px] font-bold text-right uppercase">
+                28 FEB 2026<br>Edición Digital
             </div>
         </div>
-        <nav class="nav-border flex justify-center gap-8 py-2 text-[11px] font-bold uppercase">
-            <a href="#" class="hover:underline">Internacional</a>
-            <a href="#" class="hover:underline">Política</a>
-            <a href="#" class="hover:underline">Opinión</a>
-            <a href="#" class="hover:underline">Economía</a>
-            <a href="#" class="hover:underline">Cultura</a>
+        
+        <nav class="border-double-elpais py-2 flex justify-center gap-8 text-[11px] font-bold uppercase tracking-tight">
+            <a href="#" class="hover:text-red-700">Internacional</a>
+            <a href="#" class="hover:text-red-700">Política</a>
+            <a href="#" class="hover:text-red-700">Opinión</a>
+            <a href="#" class="hover:text-red-700">Economía</a>
+            <a href="#" class="hover:text-red-700">Ciencia</a>
+            <a href="#" class="hover:text-red-700">Cultura</a>
         </nav>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 mt-8">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+    <main class="max-w-6xl mx-auto px-4 mt-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
             
-            <article class="lg:col-span-8 border-r border-gray-100 pr-0 lg:pr-10">
-                <span class="kicker">Geopolítica / Operación Furia Épica</span>
-                <h2 class="text-4xl md:text-6xl mb-4 leading-none tracking-tight">
-                    Furia Épica: La ofensiva sobre Irán redefine el mapa del crudo en 2026
-                </h2>
-                
-                <p class="article-lead italic">
-                    La intervención liderada por EE.UU. e Israel entra en su fase crítica mientras los mercados contienen el aliento ante un posible cierre del Estrecho de Ormuz.
-                </p>
+            <div class="lg:col-span-8 border-r border-gray-200 pr-8">
+                <article>
+                    <span class="kicker">Geopolítica / Operación Furia Épica</span>
+                    <h2 class="text-5xl lg:text-6xl mb-4 leading-none">
+                        La parálisis del crudo: El pulso entre Washington y Teherán alcanza el punto de no retorno
+                    </h2>
+                    
+                    <p class="lead-text">
+                        La intervención liderada por EE.UU. e Israel entra en su fase crítica mientras los mercados contienen el aliento ante un posible cierre del Estrecho de Ormuz.
+                    </p>
 
-                <div class="photo-container">
-                    <img src="https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?auto=format&fit=crop&q=80&w=2070" 
-                         alt="Conflicto en el Golfo" 
-                         class="main-photo">
-                    <p class="photo-credit text-right">FOTO: REUTERS / ARCHIVO M12e - El despliegue naval en el Estrecho de Ormuz esta mañana.</p>
-                </div>
+                    <div class="photo-wrapper">
+                        <img src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&q=80&w=1200" 
+                             alt="Vista del Estrecho de Ormuz" 
+                             class="photo-main">
+                        <p class="photo-caption">
+                            <strong>Un buque de carga transita cerca de la zona de exclusión tras el inicio de las hostilidades.</strong> 
+                            En la imagen, se observa el despliegue de la Quinta Flota. / <span class="uppercase">Reuters</span>
+                        </p>
+                    </div>
 
-                <div class="flex flex-col md:flex-row gap-8">
-                    <div class="md:w-1/4 border-t border-black pt-4">
-                        <p class="text-[11px] font-bold">M12e INTEL</p>
-                        <p class="text-[10px] text-gray-500 uppercase tracking-widest">Ciudad de México</p>
-                        <div class="mt-8">
-                            <p class="text-[10px] font-black uppercase border-b border-black mb-2">Monitor</p>
-                            <p class="text-xs font-bold text-red-700">R⊕10⊕T: NIVEL 9</p>
+                    <div class="flex gap-6 border-t border-black pt-4 mt-6">
+                        <div class="hidden md:block w-32 shrink-0">
+                            <p class="text-[11px] font-black leading-tight uppercase">M12e INTEL</p>
+                            <p class="text-[10px] text-gray-500">Ciudad de México</p>
+                        </div>
+                        <div class="font-serif text-lg text-black leading-relaxed dropcap">
+                            La historia de las guerras preventivas acaba de escribir un nuevo capítulo. Bajo el protocolo de intervención situada, el ataque coordinado sobre las bases de la Guardia Revolucionaria no solo busca la degradación militar, sino una reestructuración total del orden regional. México, en su posición como observador clave en el Consejo de Seguridad, ha instado a una tregua inmediata.
                         </div>
                     </div>
+                </article>
+            </div>
 
-                    <div class="md:w-3/4 font-serif text-lg leading-relaxed text-gray-900">
-                        <p class="dropcap mb-6">
-                            La historia de las guerras preventivas acaba de escribir un nuevo capítulo. Bajo el protocolo de intervención situada, el ataque coordinado sobre las bases de la Guardia Revolucionaria no solo busca la degradación militar, sino una reestructuración total del orden regional.
-                        </p>
-                        <p class="mb-6">
-                            Fuentes del Pentágono confirman que la capacidad de respuesta iraní ha superado las proyecciones iniciales, impactando activos críticos en la Quinta Flota. El dilema de Washington ahora es la escala: o una retirada táctica o una escalada irreversible que involucre fuerzas de tierra.
-                        </p>
-                        <p>
-                            En México, la Secretaría de Energía ha convocado a una reunión de emergencia para evaluar el impacto en los precios de importación de gasolinas, ante el disparo del barril de Brent por encima de los 140 dólares.
-                        </p>
-                    </div>
-                </div>
-            </article>
-
-            <aside class="lg:col-span-4">
+            <div class="lg:col-span-4">
                 <h3 class="text-xs font-black uppercase border-b-2 border-black pb-1 mb-6">Lo más leído</h3>
                 
-                <div class="space-y-8">
-                    <div class="flex gap-4 items-start border-b border-gray-100 pb-6">
-                        <span class="text-4xl font-black text-gray-200">1</span>
-                        <h4 class="text-sm font-bold leading-tight hover:text-red-700 cursor-pointer">
-                            El colapso del Rial: ¿Es el fin de la economía de resistencia en Teherán?
+                <div class="space-y-6">
+                    <div class="flex items-start border-b border-gray-100 pb-4">
+                        <span class="rank-number">1</span>
+                        <h4 class="text-sm font-bold leading-tight hover:text-red-800 cursor-pointer">
+                            El impacto en la frontera: ¿Cómo afecta la guerra a las remesas?
                         </h4>
                     </div>
                     
-                    <div class="flex gap-4 items-start border-b border-gray-100 pb-6">
-                        <span class="text-4xl font-black text-gray-200">2</span>
-                        <h4 class="text-sm font-bold leading-tight hover:text-red-700 cursor-pointer">
-                            México ajusta su estrategia energética ante la crisis global.
+                    <div class="flex items-start border-b border-gray-100 pb-4">
+                        <span class="rank-number">2</span>
+                        <h4 class="text-sm font-bold leading-tight hover:text-red-800 cursor-pointer">
+                            La inteligencia artificial M12e predice un nuevo frente en el Mar Rojo.
                         </h4>
                     </div>
 
-                    <div class="flex gap-4 items-start border-b border-gray-100 pb-6">
-                        <span class="text-4xl font-black text-gray-200">3</span>
-                        <h4 class="text-sm font-bold leading-tight hover:text-red-700 cursor-pointer">
-                            Sistemas S-400: Por qué fallaron las defensas aéreas.
+                    <div class="flex items-start">
+                        <span class="rank-number">3</span>
+                        <h4 class="text-sm font-bold leading-tight hover:text-red-800 cursor-pointer">
+                            México y su papel en la nueva crisis energética global.
                         </h4>
                     </div>
                 </div>
 
-                <div class="mt-12 p-6 bg-gray-50 border-t-4 border-black">
-                    <h3 class="font-sans text-[10px] font-black uppercase mb-4 tracking-widest text-center">Indicadores Críticos</h3>
-                    <div class="space-y-4">
-                        <div class="flex justify-between text-[10px] font-bold uppercase">
-                            <span>Tensión Ormuz</span>
-                            <span>94%</span>
+                <div class="mt-10 bg-gray-50 p-4 border border-gray-200">
+                    <h3 class="font-sans text-[10px] font-black uppercase mb-4 tracking-widest text-gray-600">Mercados en Vivo</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="font-bold">BRENT CRUDE</span>
+                            <span class="text-red-600 font-black">142.50 USD</span>
                         </div>
-                        <div class="w-full bg-gray-200 h-1">
-                            <div class="bg-black h-1" style="width: 94%"></div>
-                        </div>
-                        <div class="flex justify-between text-[10px] font-bold uppercase">
-                            <span>Brent Crude</span>
-                            <span>$142.50</span>
-                        </div>
-                        <div class="w-full bg-gray-200 h-1">
-                            <div class="bg-red-700 h-1" style="width: 80%"></div>
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="font-bold">BOLSA MX</span>
+                            <span class="text-red-600 font-black">-3.21%</span>
                         </div>
                     </div>
                 </div>
-            </aside>
+            </div>
 
         </div>
     </main>
 
-    <footer class="mt-20 border-t border-black py-12 text-center">
-        <h2 class="text-4xl italic font-black mb-4">M12e</h2>
-        <p class="text-[10px] text-gray-500 tracking-[0.3em] uppercase">Protocolo de Intervención Situada · Edición 2026</p>
+    <footer class="bg-white border-t border-black py-12 mt-20">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="text-4xl font-black italic tracking-tighter mb-4">M12e</div>
+            <div class="flex justify-center gap-6 text-[10px] font-bold text-gray-500 uppercase mb-4">
+                <a href="#">Contacto</a>
+                <a href="#">Aviso Legal</a>
+                <a href="#">Suscripciones</a>
+            </div>
+            <p class="text-[9px] text-gray-400 uppercase tracking-widest">© 2026 M12e Protocolo de Intervención</p>
+        </div>
     </footer>
 
 </body>
