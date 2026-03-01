@@ -41,35 +41,6 @@ h1, h2, h3 {
     margin-bottom: 15px;
 }
 
-.nav-intervention {
-    border-bottom: 4px double #000;
-    padding: 12px 0;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-.nav-link {
-    font-size: 11px;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #000;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-}
-
-.nav-link:hover { color: #c00; }
-
-.kicker-analisis {
-    color: #c00;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 13px;
-    display: block;
-    margin-bottom: 10px;
-}
-
 .titulo-demanda {
     font-size: 56px;
     line-height: 1;
@@ -98,13 +69,6 @@ h1, h2, h3 {
     overflow: hidden;
 }
 
-.rank-num {
-    font-size: 36px;
-    font-weight: 900;
-    color: #f0f0f0;
-    line-height: 0.8;
-}
-
 .analisis-texto {
     font-size: 16px;
     line-height: 1.7;
@@ -112,38 +76,22 @@ h1, h2, h3 {
     text-align: justify;
 }
 
-.analisis-texto h3 {
-    font-size: 28px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #000;
-    padding-bottom: 5px;
-}
-
-.analisis-texto p {
-    margin-bottom: 1.2em;
-}
-
-.analisis-texto ul {
-    margin-bottom: 1.2em;
-    padding-left: 2em;
-    list-style-type: disc;
-}
-
-.youtube-button {
-    display: inline-block;
-    background: black;
+.youtube-destacado {
+    display: block;
+    background: #ff0000;
     color: white;
-    padding: 12px 20px;
+    padding: 16px;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 1px;
+    text-align: center;
+    border-radius: 6px;
     transition: 0.3s;
 }
 
-.youtube-button:hover {
-    background: #c00;
+.youtube-destacado:hover {
+    background: #000;
 }
 </style>
 </head>
@@ -168,14 +116,13 @@ h1, h2, h3 {
 
 <div class="lg:col-span-8">
 
-<span class="kicker-analisis">Análisis de alta densidad</span>
 <h2 class="titulo-demanda">La guerra invisible</h2>
 
 <p class="balazo-orden">
 "El conflicto no se declara, se densifica."
 </p>
 
-<!-- CARGA DINÁMICA DE IMAGEN -->
+<!-- IMAGEN DINÁMICA -->
 <div class="photo-placeholder">
     <img id="imagen-principal" style="width:100%; height:100%; object-fit:cover; display:none;">
     <span id="texto-placeholder">Agregar imagen</span>
@@ -192,8 +139,9 @@ h1, h2, h3 {
 
 <div class="lg:col-span-4 border-l border-gray-100 pl-8">
 
+<!-- NOTA CORREGIDA -->
 <div class="bg-gray-50 p-5 border-l-4 border-red-700">
-<p class="text-[10px] font-black uppercase mb-2">Nota importante.</p>
+<p class="text-[11px] font-black uppercase mb-2">Nota importante.</p>
 <p class="text-sm font-serif italic leading-snug">
 La frecuencia de incidentes directos aumentó un 300%.
 </p>
@@ -209,9 +157,16 @@ Visitas al Nodo
 0000000
 </div>
 
-<a href="https://www.youtube.com/@m12eradio31" target="_blank" class="youtube-button">
-Ir a M12E Radio 31
+<!-- ENLACE YOUTUBE MUY VISIBLE -->
+<a href="https://www.youtube.com/@m12eradio31" 
+   target="_blank" 
+   class="youtube-destacado">
+   ▶ Ver M12E Radio 31 en YouTube
 </a>
+
+<p class="text-xs mt-2 text-gray-500">
+Se abrirá el canal oficial de YouTube en una nueva pestaña.
+</p>
 
 </div>
 </div>
@@ -232,7 +187,7 @@ const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeri
 const fecha = new Date().toLocaleDateString('es-ES', opciones);
 fechaElemento.textContent = fecha.charAt(0).toUpperCase() + fecha.slice(1);
 
-// CONTADOR REAL (LOCAL)
+// CONTADOR LOCAL REAL
 let visitas = localStorage.getItem("contadorM12e");
 if (!visitas) {
     visitas = 1;
