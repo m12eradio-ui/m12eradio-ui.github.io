@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M12e | Edición Digital México</title>
+    <title>M12e | Nodo de Inteligencia México</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;700;900&display=swap');
@@ -18,7 +18,6 @@
             font-family: 'Libre Baskerville', serif; 
             font-weight: 700; 
             letter-spacing: -0.04em;
-            line-height: 1;
         }
 
         .top-bar {
@@ -37,65 +36,70 @@
             line-height: 0.9;
         }
 
-        .nav-link {
-            font-size: 11px;
-            font-weight: 700;
+        /* Navegación basada en los títulos de la intervención */
+        .nav-intervention {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 15px 0;
+            border-bottom: 4px double #000;
+        }
+
+        .nav-item {
+            font-size: 10px;
+            font-weight: 900;
             text-transform: uppercase;
             color: #000;
-            letter-spacing: 0.02em;
+            letter-spacing: 0.05em;
+            text-decoration: none;
         }
 
-        /* Espacio para el Título de la Demanda de Intervención */
+        .nav-item:hover {
+            color: #c00;
+        }
+
         .main-headline {
-            font-size: 54px;
-            margin: 20px 0;
-            text-align: left;
+            font-size: 52px;
+            margin: 25px 0;
+            line-height: 1.05;
         }
 
-        .kicker-analisis {
+        .kicker-density {
             color: #c00;
             font-weight: 900;
             text-transform: uppercase;
             font-size: 12px;
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
-        /* Espacio dinámico para Fotografía */
         .photo-slot {
             width: 100%;
-            background: #f3f3f3;
-            min-height: 400px;
+            background: #f9f9f9;
+            border: 1px dashed #ccc;
+            aspect-ratio: 16 / 9;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            overflow: hidden;
+            margin-bottom: 10px;
         }
 
-        .photo-slot img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-
-        /* Balazo de la Orden de Intervención */
-        .lead-balazo {
+        .lead-intervention {
             font-family: 'Libre Baskerville', serif;
-            font-size: 19px;
+            font-size: 20px;
             line-height: 1.4;
-            color: #333;
-            margin-bottom: 20px;
-            border-left: 3px solid #000;
-            padding-left: 15px;
+            color: #1a1a1a;
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 4px solid #c00;
         }
 
-        .sidebar-bullet {
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 12px;
-            display: block;
+        .rank-box {
+            font-size: 32px;
+            font-weight: 900;
+            color: #eee;
+            line-height: 1;
         }
     </style>
 </head>
@@ -104,99 +108,90 @@
     <div class="top-bar py-2 px-4 flex justify-between items-center max-w-7xl mx-auto">
         <div>Sábado, 28 de febrero de 2026 | Periódico digital de nuestro país</div>
         <div class="flex gap-4 items-center">
-            <span class="font-bold uppercase text-red-700">México</span>
-            <span class="text-gray-400">|</span>
-            <span class="font-bold">EDICIÓN DIGITAL</span>
+            <span class="font-bold uppercase text-red-700 tracking-widest">México</span>
+            <span class="text-gray-300">|</span>
+            <span class="font-bold text-[10px]">EDICIÓN DIGITAL</span>
         </div>
     </div>
 
-    <header class="text-center py-8 max-w-7xl mx-auto border-b border-gray-200">
+    <header class="max-w-7xl mx-auto px-4 text-center pt-8">
         <div class="logo-m12e">M12e</div>
+        <p class="text-[9px] font-black uppercase tracking-[0.5em] mt-2 mb-6">Protocolo de Intervención Situada</p>
         
-        <nav class="flex justify-center gap-6 mt-8 pb-2">
-            <a href="#preambulo" class="nav-link">Preámbulo</a>
-            <a href="#resumen" class="nav-link">Resumen</a>
-            <a href="#cronologia" class="nav-link">Cronología</a>
-            <a href="#escalada" class="nav-link">Escalada</a>
-            <a href="#narrativas" class="nav-link">Narrativas</a>
-            <a href="#fetiches" class="nav-link">Fetiches</a>
-            <a href="#escenarios" class="nav-link">Escenarios</a>
+        <nav class="nav-intervention">
+            <a href="#preambulo" class="nav-item text-red-700">PREÁMBULO</a>
+            <a href="#resumen" class="nav-item">RESUMEN</a>
+            <a href="#cronologia" class="nav-item">CRONOLOGÍA</a>
+            <a href="#escalada" class="nav-item">ESCALADA</a>
+            <a href="#narrativas" class="nav-item">NARRATIVAS</a>
+            <a href="#fetiches" class="nav-item">FETICHES</a>
+            <a href="#escenarios" class="nav-item">ESCENARIOS</a>
+            <a href="#paradoja" class="nav-item">PARADOJA</a>
+            <a href="#articulo" class="nav-item">ARTÍCULO</a>
         </nav>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 mt-8">
+    <main class="max-w-7xl mx-auto px-4 mt-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
             <div class="lg:col-span-8">
-                <span class="kicker-analisis">Análisis de la Densidad</span>
+                <span class="kicker-density">Análisis de la Densidad</span>
+                <h2 class="main-headline">[Título de la Demanda de Intervención]</h2>
                 
-                <h2 class="main-headline">
-                    [Título de la demanda de intervención]
-                </h2>
-                
-                <p class="lead-balazo">
-                    [Aquí emana el balazo generado por la orden de intervención]
+                <p class="lead-intervention">
+                    [Balazo emanado de la orden de intervención: síntesis de máxima densidad]
                 </p>
 
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                    <div class="md:col-span-12">
-                        <div id="main-photo-space" class="photo-slot">
-                            <span class="text-gray-400 font-bold italic">Espacio reservado para fotografía del análisis</span>
-                            </div>
-                        <p class="text-[11px] text-gray-500 mt-2 uppercase tracking-widest">Archivo M12e / Inteligencia Visual</p>
+                <div id="intervention-photo-container">
+                    <div class="photo-slot">
+                        <p class="text-gray-400 font-bold uppercase text-[10px] tracking-widest">Cargar fotografía del análisis aquí</p>
                     </div>
+                    <p class="text-[10px] text-gray-500 italic text-right">Crédito Visual: Inteligencia M12e / 2026</p>
                 </div>
             </div>
 
             <div class="lg:col-span-4 border-l border-gray-100 pl-8">
-                <h3 class="text-xs font-black uppercase border-b-2 border-black pb-1 mb-6 tracking-tighter">Contenidos del Análisis</h3>
+                <h3 class="text-xs font-black uppercase border-b-2 border-black pb-1 mb-6">Contenidos del Análisis</h3>
                 
                 <div class="space-y-8">
-                    <div>
-                        <span class="text-4xl font-black text-gray-100 float-left mr-2 leading-none">01</span>
-                        <a href="#fetiches" class="sidebar-bullet hover:text-red-700">
-                            Fetiche derribado: [Nombre del fetiche analizado en la orden]
+                    <div class="flex gap-4">
+                        <span class="rank-box">01</span>
+                        <a href="#fetiches" class="text-sm font-bold leading-tight hover:text-red-700">
+                            Fetiche derribado: [Análisis del símbolo intervenido]
                         </a>
                     </div>
                     
-                    <div>
-                        <span class="text-4xl font-black text-gray-100 float-left mr-2 leading-none">02</span>
-                        <a href="#escenarios" class="sidebar-bullet hover:text-red-700">
-                            Lo que se espera: Prospectiva de la fase de intervención
+                    <div class="flex gap-4 border-b border-gray-100 pb-6">
+                        <span class="rank-box">02</span>
+                        <a href="#escenarios" class="text-sm font-bold leading-tight hover:text-red-700">
+                            Lo que se espera que venga: Prospectiva de la fase crítica
                         </a>
                     </div>
 
-                    <div class="bg-gray-50 p-4 border-l-4 border-red-700">
-                        <p class="text-[10px] font-black uppercase mb-2">Dato Crítico (IA Selection):</p>
-                        <p class="text-sm italic font-serif leading-tight">
-                            "[Aquí la IA insertará el dato más relevante obtenido de la orden de intervención]"
-                        </p>
+                    <div class="bg-gray-50 p-4 border-t-2 border-red-700">
+                        <p class="text-[9px] font-black uppercase text-red-700 mb-1">Dato de Intervención (IA Select):</p>
+                        <p class="text-sm font-serif italic">[Dato relevante obtenido del análisis]</p>
                     </div>
                 </div>
 
-                <div class="mt-12 p-6 border border-gray-200">
-                    <div class="text-center">
-                        <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Visitas al Nodo</p>
-                        <div class="text-2xl font-mono font-bold tracking-tighter bg-black text-white py-1 px-3 inline-block">
-                            0000432
-                        </div>
-                    </div>
+                <div class="mt-12 p-6 border border-gray-100 text-center">
+                    <span class="text-[9px] font-black text-gray-400 uppercase tracking-widest block mb-2">Visitas al Nodo</span>
+                    <div class="font-mono text-2xl bg-black text-white px-4 py-1 inline-block mb-6">0000432</div>
                     
-                    <div class="mt-6 pt-6 border-t border-gray-100 text-center">
-                        <a href="https://www.youtube.com/@m12eradio31" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold hover:text-red-700">
-                            <span class="w-3 h-3 bg-red-600 rounded-full animate-pulse"></span>
-                            ESCUCHAR M12E RADIO
+                    <div class="pt-4 border-t border-gray-100">
+                        <a href="https://www.youtube.com/@m12eradio31" target="_blank" class="text-[11px] font-black hover:text-red-700 flex items-center justify-center gap-2">
+                            <span class="w-2 h-2 bg-red-600 rounded-full animate-ping"></span>
+                            M12E RADIO EN VIVO
                         </a>
                     </div>
                 </div>
             </div>
-
         </div>
     </main>
 
-    <footer class="mt-20 border-t border-black py-12 text-center bg-white">
-        <div class="logo-m12e text-2xl">M12e</div>
-        <p class="text-[10px] text-gray-400 mt-4 tracking-[0.4em] uppercase">México · Nodo de Inteligencia Digital</p>
+    <footer class="mt-20 border-t border-black py-16 text-center">
+        <div class="logo-m12e text-2xl mb-4">M12e</div>
+        <p class="text-[10px] text-gray-400 uppercase tracking-[0.3em]">México · Nodo Digital · 2026</p>
     </footer>
 
 </body>
