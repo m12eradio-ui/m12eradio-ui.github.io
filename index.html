@@ -3,134 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título del Portal | Nodo Digital</title>
+    <title>M12e | Nodo de Inteligencia Digital México</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;700;900&display=swap');
         
-        :root {
-            --font-serif: 'Libre Baskerville', serif;
-            --font-sans: 'Inter', sans-serif;
-        }
-
         body { 
-            font-family: var(--font-sans);
-            background-color: #ffffff;
-            color: #000000;
+            background-color: #ffffff !important; 
+            color: #000000 !important;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
         }
 
-        .serif-title { font-family: var(--font-serif); }
-        
-        .nav-double-border {
+        h1, h2, h3 { 
+            font-family: 'Libre Baskerville', serif; 
+            font-weight: 700; 
+            letter-spacing: -0.04em;
+        }
+
+        .top-bar {
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 11px;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-m12e {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 64px;
+            font-weight: 900;
+            letter-spacing: -0.06em;
+            border-bottom: 2px solid #000;
+            display: inline-block;
+            line-height: 0.85;
+            margin-bottom: 15px;
+        }
+
+        .nav-intervention {
             border-bottom: 4px double #000;
+            padding: 12px 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
         }
 
-        .prose-content {
+        .nav-link {
+            font-size: 11px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #000;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+        }
+
+        .nav-link:hover { color: #c00; }
+
+        .kicker-analisis {
+            color: #c00;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 13px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .titulo-demanda {
+            font-size: 56px;
+            line-height: 1;
+            margin: 20px 0;
+        }
+
+        .balazo-orden {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 22px;
+            line-height: 1.35;
+            color: #222;
+            margin-bottom: 30px;
+            border-left: 5px solid #000;
+            padding-left: 20px;
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            background-color: #f7f7f7;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #eee;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .rank-num {
+            font-size: 36px;
+            font-weight: 900;
+            color: #f0f0f0;
+            line-height: 0.8;
+        }
+
+        .analisis-texto {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #111;
             text-align: justify;
-            hyphens: auto;
+        }
+        .analisis-texto h3 {
+            font-size: 28px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+        }
+        .analisis-texto p {
+            margin-bottom: 1.2em;
+        }
+        .analisis-texto ul {
+            margin-bottom: 1.2em;
+            padding-left: 2em;
+            list-style-type: disc;
         }
     </style>
 </head>
-<body class="antialiased">
+<body>
 
-    <div class="max-w-6xl mx-auto border-b border-gray-200 py-3 px-4 flex justify-between items-center text-[11px] text-gray-700">
-        <div>[FECHA ACTUAL] | [NOMBRE DE LA PUBLICACIÓN]</div>
-        <div class="flex gap-4 font-bold items-center text-gray-400">
-            <span class="text-red-700 uppercase tracking-widest">[REGIÓN]</span>
-            <span>|</span>
-            <span class="text-[10px] uppercase tracking-tighter">[ESTADO_RED]</span>
+    <div class="top-bar py-3 px-4 flex justify-between items-center">
+        <div>Sábado, 28 de febrero de 2026 | Periódico digital de nuestro país</div>
+        <div class="flex gap-4 font-bold">
+            <span class="text-red-700 uppercase">México</span>
+            <span class="text-gray-300">|</span>
+            <span class="text-[10px] uppercase tracking-tighter">Edición Digital</span>
         </div>
     </div>
 
-    <header class="max-w-6xl mx-auto px-4 text-center mt-10">
-        <div class="serif-title text-6xl md:text-8xl font-black tracking-tighter leading-[0.8] inline-block border-b-4 border-black pb-2 mb-6">
-            LOGO
-        </div>
+    <header class="max-w-6xl mx-auto px-4 text-center mt-8">
+        <div class="logo-m12e">M12e</div>
         
-        <nav class="nav-double-border py-4 mt-4">
-            <ul class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-[11px] font-black uppercase tracking-widest">
-                <li><a href="#" class="hover:text-red-700 transition-colors">Sección 01</a></li>
-                <li><a href="#" class="hover:text-red-700 transition-colors">Sección 02</a></li>
-                <li><a href="#" class="hover:text-red-700 transition-colors">Sección 03</a></li>
-                <li><a href="#" class="hover:text-red-700 transition-colors">Sección 04</a></li>
-                <li><a href="#" class="hover:text-red-700 transition-colors">Sección 05</a></li>
-            </ul>
+        <nav class="nav-intervention">
+            <a href="#preambulo" class="nav-link">Preámbulo</a>
+            <a href="#resumen" class="nav-link">Resumen</a>
+            <a href="#cronologia" class="nav-link">Cronología</a>
+            <a href="#escalada" class="nav-link">Escalada</a>
+            <a href="#narrativas" class="nav-link">Narrativas</a>
+            <a href="#fetiches" class="nav-link">Fetiches</a>
+            <a href="#escenarios" class="nav-link">Escenarios</a>
+            <a href="#paradoja" class="nav-link">Paradoja</a>
+            <a href="#articulo" class="nav-link">Artículos</a>
         </nav>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 mt-12 mb-24">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+    <main class="max-w-6xl mx-auto px-4 mt-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
-            <article class="lg:col-span-8">
-                <span class="text-red-700 font-black uppercase text-xs tracking-widest block mb-4">
-                    [ETIQUETA DE CATEGORÍA]
-                </span>
-                
-                <h1 class="serif-title text-4xl md:text-6xl font-bold leading-none mb-8 tracking-tight">
-                    Título Principal
-                </h1>
+            <div class="lg:col-span-8">
+                <span class="kicker-analisis">Análisis de alta densidad [R⊕10⊕T⊕P⊕A] ∘ M ∘ B4 ∘ B7</span>
+                <h2 class="titulo-demanda">La guerra invisible: cronología de una disuasión fallida entre Estados Unidos e Irán</h2>
+                <p class="balazo-orden">"El conflicto no se declara, se densifica: cada ataque es un capítulo de una misma novela de agotamiento estratégico."</p>
 
-                <blockquote class="serif-title text-xl md:text-2xl italic leading-relaxed text-gray-800 border-l-8 border-black pl-6 mb-10">
-                    "Frase destacada del documento."
-                </blockquote>
-
-                <figure class="mb-12">
-                    <div class="aspect-video bg-gray-100 border border-gray-200 overflow-hidden relative group">
-                        <div class="w-full h-full flex items-center justify-center text-gray-300 font-black italic uppercase text-xs tracking-widest">Espacio Multimedia</div>
+                <div id="contenedor-foto">
+                    <div class="photo-placeholder">
+                        <img src="EUIRAN.jpg" alt="Análisis gráfico del conflicto Irán-EE.UU." style="width:100%; height:100%; object-fit: cover;" />
                     </div>
-                    <figcaption class="text-[10px] text-gray-400 text-right uppercase mt-3 tracking-widest">
-                        [CRÉDITO] · [REFERENCIA]
-                    </figcaption>
-                </figure>
-
-                <div class="prose-content space-y-6 text-lg leading-relaxed text-gray-900">
-                    <h3 class="serif-title text-3xl font-bold pt-6 border-b-2 border-black inline-block mb-4">Subtítulo</h3>
-                    <p>Contenido principal aquí...</p>
+                    <p class="text-[10px] text-gray-400 text-right uppercase mt-2">Agencia M12e · Inteligencia Situada · Fuente: EUIRAN.jpg</p>
                 </div>
-            </article>
 
-            <aside class="lg:col-span-4 lg:border-l lg:border-gray-100 lg:pl-10">
-                <h3 class="text-xs font-black uppercase border-b-2 border-black pb-1 mb-10 tracking-tighter">Índice / Datos</h3>
+                <div class="analisis-texto mt-12" id="preambulo">
+                    <h3>Preámbulo: la topología del conflicto</h3>
+                    <p>La relación entre Estados Unidos e Irán no es una guerra convencional con frentes definidos, sino un sistema complejo de acciones y reacciones que se extiende por más de cuatro décadas. Desde la Revolución Islámica de 1979, ambos países han operado en un umbral de hostilidad que oscila entre la confrontación proxy y el ataque directo. El año 2026 se presenta como un punto de inflexión: las capacidades militares de Irán han alcanzado madurez tecnológica (misiles hipersónicos, drones Shahed-136 de quinta generación) mientras que EE.UU. reconfigura su presencia en Oriente Medio tras la retirada de Afganistán y el reequilibrio hacia el Indo-Pacífico.</p>
+
+                    <h3 id="resumen">Resumen densimétrico</h3>
+                    <p>Entre 2020 y 2026, la conflictividad ha pasado de una fase de ataques selectivos (asesinato de Soleimani, represalias iraníes contra bases en Irak) a una guerra de desgaste multidominio. Irán ha consolidado un arco de influencia que va desde el Mediterráneo hasta el Golfo, utilizando milicias chiíes en Siria, Irak y Yemen como multiplicadores de fuerza. EE.UU. ha respondido con sanciones extremas y ataques quirúrgicos. Sin embargo, la línea roja nuclear ha sido cruzada retóricamente: Irán enriquece uranio al 84%, cerca del 90% necesario para un arma.</p>
+
+                    <h3 id="cronologia">Cronología estratificada (2020–2026)</h3>
+                    <p><strong>2020:</strong> Operación Martir Soleimani (ataque estadounidense con drones en Bagdad) seguida de la represalia iraní con misiles balísticos contra la base de Ain al-Asad.</p>
+                    <p><strong>2021:</strong> Conversaciones de Viena para el retorno al JCPOA. Estancamiento. Aumento de ataques contra buques vinculados a Israel en el Golfo de Omán.</p>
+                    <p><strong>2022:</strong> Protestas internas en Irán (Movimiento Mujer, Vida, Libertad) desvían recursos de seguridad. EE.UU. acusa a Irán de suministrar drones a Rusia.</p>
+                    <p><strong>2023:</strong> Escalada naval: Irán intenta apoderarse de petroleros británicos y estadounidenses. EE.UU. despliega el USS Bataan en el Golfo.</p>
+                    <p><strong>2024:</strong> Israel ataca el consulado iraní en Damasco; Irán responde con un ataque directo sin precedentes desde su territorio (misiles y drones) contra Israel.</p>
+                    <p><strong>2025:</strong> Elecciones presidenciales en Irán ganadas por un conservador pragmático. En octubre, milicias proiraníes atacan la embajada de EE.UU. en Bagdad.</p>
+                    <p><strong>2026 (enero-febrero):</strong> Derribo de un dron estadounidense MQ-9 Reaper sobre el Golfo y explosión en Natanz. La tensión está en su punto más alto.</p>
+
+                    <h3 id="escalada">Escalada: umbrales y mecanismos de activación</h3>
+                    <p>La teoría de la escalada aplicada al conflicto irano-estadounidense revela una estructura de "guerra de umbrales". Cada acción busca modificar el statu quo sin desencadenar una respuesta masiva. La asimetría híbrida combina drones, misiles de crucero y ciberataques como herramientas de desgaste. En 2026, ambos actores han normalizado el enfrentamiento directo de baja intensidad.</p>
+
+                    <h3 id="fetiches">Fetiches derribados: mitos que colapsaron</h3>
+                    <p>El análisis permite identificar los fetiches que han caído. El primero es el fetiche de la disuasión convencional: se creía que la presencia de portaaviones bastaría para disuadir a Irán; los ataques de 2023-2025 demostraron que la disuasión es porosa. Segundo, el fetiche de que Irán no atacaría directamente a Israel: el ataque de abril de 2024 rompió ese tabú.</p>
+
+                    <h3 id="escenarios">Escenarios prospectivos al 2027</h3>
+                    <ul>
+                        <li><strong>1. Guerra limitada controlada:</strong> Ataques selectivos mutuos que no escalan a conflicto abierto. Probabilidad: 45%.</li>
+                        <li><strong>2. Explosión nuclear regional:</strong> Irán realiza un ensayo nuclear. Probabilidad: 15%.</li>
+                        <li><strong>3. Détente forzada:</strong> Acuerdo de modus vivendi por agotamiento. Probabilidad: 20%.</li>
+                        <li><strong>4. Guerra regional generalizada:</strong> Incidente mayor desencadena ataques masivos. Probabilidad: 20%.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="lg:col-span-4 border-l border-gray-100 pl-8">
+                <h3 class="text-xs font-black uppercase border-b-2 border-black pb-1 mb-8">Contenidos del Análisis</h3>
                 
-                <div class="space-y-12">
-                    <div class="group cursor-pointer">
-                        <span class="serif-title text-5xl font-black text-gray-100 group-hover:text-red-700 transition-colors leading-none block">01</span>
-                        <a href="#" class="text-sm font-bold leading-tight block -mt-2 hover:underline">
-                            Enlace a sección específica.
+                <div class="space-y-10">
+                    <div class="flex gap-4">
+                        <span class="rank-num">01</span>
+                        <a href="#fetiches" class="text-sm font-bold leading-tight hover:text-red-700">
+                            Uno de los fetiches derribados: El mito de la disuasión por portaaviones
                         </a>
                     </div>
                     
-                    <div class="bg-gray-50 p-6 border-l-4 border-red-700">
-                        <p class="text-[10px] font-black uppercase mb-3 tracking-widest text-red-700">Nota importante:</p>
-                        <p class="serif-title italic text-sm leading-relaxed text-gray-800">
-                            Aquí puedes colocar información técnica, aclaraciones o datos relevantes que complementen el artículo principal.
-                        </p>
+                    <div class="flex gap-4">
+                        <span class="rank-num">02</span>
+                        <a href="#escenarios" class="text-sm font-bold leading-tight hover:text-red-700">
+                            Lo que se espera que venga: Prospectiva técnica — dominio de drones hipersónicos
+                        </a>
                     </div>
 
-                    <div class="pt-12 border-t border-gray-100 text-center">
-                        <p class="text-[9px] font-black text-gray-400 uppercase tracking-[0.3em] mb-4">Métrica / Contador</p>
-                        <div class="bg-black text-white px-6 py-2 inline-block font-mono text-xl tracking-widest">
-                            0000000
-                        </div>
-                        
-                        <div class="mt-10">
-                            <a href="#" class="inline-flex items-center gap-3 text-[11px] font-black hover:text-red-700 transition-all">
-                                <span class="relative flex h-3 w-3">
-                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                    <span class="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
-                                </span>
-                                ESTADO EN VIVO
-                            </a>
-                        </div>
+                    <div class="bg-gray-50 p-5 border-l-4 border-red-700">
+                        <p class="text-[10px] font-black uppercase mb-2">Dato más importante (IA Selection):</p>
+                        <p class="text-sm font-serif italic leading-snug">
+                            La frecuencia de incidentes directos aumentó un 300% entre 2023 y 2026, evidenciando una zona gris que normaliza la violencia sin declaración formal.
+                        </p>
                     </div>
                 </div>
-            </aside>
+
+                <div class="mt-16 pt-8 border-t border-gray-200 text-center">
+                    <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-3">Visitas al Nodo</p>
+                    <div class="font-mono text-2xl bg-black text-white px-4 py-1 inline-block mb-8">0000432</div>
+                    
+                    <a href="https://www.youtube.com/@m12eradio31" target="_blank" class="block group">
+                        <div class="flex items-center justify-center gap-3 text-[11px] font-black group-hover:text-red-700">
+                            <span class="w-3 h-3 bg-red-600 rounded-full animate-pulse"></span>
+                            M12E RADIO 31 EN VIVO
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </main>
 
-    <footer class="border-t-2 border-black py-16 bg-white text-center">
-        <div class="serif-title text-4xl font-black mb-4">LOGO</div>
-        <p class="text-[10px] text-gray-400 uppercase tracking-[0.5em]">[ENTIDAD] · [AÑO]</p>
+    <footer class="mt-24 border-t border-black py-12 text-center">
+        <div class="logo-m12e text-2xl mb-4">M12e</div>
+        <p class="text-[10px] text-gray-400 uppercase tracking-widest">México · 2026 · Nodo de Inteligencia Digital</p>
     </footer>
 
 </body>
