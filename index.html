@@ -1,278 +1,262 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M12e | Nodo de Inteligencia Digital México</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;700;900&display=swap');
-        
-        body { 
-            background-color: #ffffff !important; 
-            color: #000000 !important;
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M12e | Nodo de Inteligencia Digital México</title>
+<script src="https://cdn.tailwindcss.com"></script>
 
-        h1, h2, h3 { 
-            font-family: 'Libre Baskerville', serif; 
-            font-weight: 700; 
-            letter-spacing: -0.04em;
-        }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;700;900&display=swap');
 
-        .top-bar {
-            border-bottom: 1px solid #e0e0e0;
-            font-size: 11px;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+body { 
+    background-color: #ffffff !important; 
+    color: #000000 !important;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
 
-        .logo-m12e {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 64px;
-            font-weight: 900;
-            letter-spacing: -0.06em;
-            border-bottom: 2px solid #000;
-            display: inline-block;
-            line-height: 0.85;
-            margin-bottom: 15px;
-        }
+h1, h2, h3 { 
+    font-family: 'Libre Baskerville', serif; 
+    font-weight: 700; 
+    letter-spacing: -0.04em;
+}
 
-        .nav-intervention {
-            border-bottom: 4px double #000;
-            padding: 12px 0;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
+.top-bar {
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 11px;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .nav-link {
-            font-size: 11px;
-            font-weight: 900;
-            text-transform: uppercase;
-            color: #000;
-            letter-spacing: 0.05em;
-            text-decoration: none;
-        }
+.logo-m12e {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: -0.06em;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+    line-height: 0.85;
+    margin-bottom: 15px;
+}
 
-        .nav-link:hover { color: #c00; }
+.nav-intervention {
+    border-bottom: 4px double #000;
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
 
-        .kicker-analisis {
-            color: #c00;
-            font-weight: 900;
-            text-transform: uppercase;
-            font-size: 13px;
-            display: block;
-            margin-bottom: 10px;
-        }
+.nav-link {
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+}
 
-        .titulo-demanda {
-            font-size: 56px;
-            line-height: 1;
-            margin: 20px 0;
-        }
+.nav-link:hover { color: #c00; }
 
-        .balazo-orden {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 22px;
-            line-height: 1.35;
-            color: #222;
-            margin-bottom: 30px;
-            border-left: 5px solid #000;
-            padding-left: 20px;
-        }
+.kicker-analisis {
+    color: #c00;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 10px;
+}
 
-        .photo-placeholder {
-            width: 100%;
-            background-color: #f7f7f7;
-            aspect-ratio: 16 / 9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #eee;
-            margin-bottom: 10px;
-            overflow: hidden;
-        }
+.titulo-demanda {
+    font-size: 56px;
+    line-height: 1;
+    margin: 20px 0;
+}
 
-        .rank-num {
-            font-size: 36px;
-            font-weight: 900;
-            color: #f0f0f0;
-            line-height: 0.8;
-        }
+.balazo-orden {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 22px;
+    line-height: 1.35;
+    color: #222;
+    margin-bottom: 30px;
+    border-left: 5px solid #000;
+    padding-left: 20px;
+}
 
-        .analisis-texto {
-            font-family: 'Inter', sans-serif;
-            font-size: 16px;
-            line-height: 1.7;
-            color: #111;
-            text-align: justify;
-        }
-        .analisis-texto h3 {
-            font-size: 28px;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #000;
-            padding-bottom: 5px;
-        }
-        .analisis-texto p {
-            margin-bottom: 1.2em;
-        }
-        .analisis-texto ul {
-            margin-bottom: 1.2em;
-            padding-left: 2em;
-            list-style-type: disc;
-        }
-    </style>
+.photo-placeholder {
+    width: 100%;
+    background-color: #f7f7f7;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.rank-num {
+    font-size: 36px;
+    font-weight: 900;
+    color: #f0f0f0;
+    line-height: 0.8;
+}
+
+.analisis-texto {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #111;
+    text-align: justify;
+}
+
+.analisis-texto h3 {
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+}
+
+.analisis-texto p {
+    margin-bottom: 1.2em;
+}
+
+.analisis-texto ul {
+    margin-bottom: 1.2em;
+    padding-left: 2em;
+    list-style-type: disc;
+}
+
+.youtube-button {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 12px 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.youtube-button:hover {
+    background: #c00;
+}
+</style>
 </head>
+
 <body>
 
-    <div class="top-bar py-3 px-4 flex justify-between items-center">
-        <div>Sábado, 28 de febrero de 2026 | Periódico digital de nuestro país</div>
-        <div class="flex gap-4 font-bold">
-            <span class="text-red-700 uppercase">México</span>
-            <span class="text-gray-300">|</span>
-            <span class="text-[10px] uppercase tracking-tighter">Edición Digital</span>
-        </div>
+<div class="top-bar py-3 px-4 flex justify-between items-center">
+    <div id="fecha-actual"></div>
+    <div class="flex gap-4 font-bold">
+        <span class="text-red-700 uppercase">México</span>
+        <span class="text-gray-300">|</span>
+        <span class="text-[10px] uppercase tracking-tighter">Edición Digital</span>
     </div>
+</div>
 
-    <header class="max-w-6xl mx-auto px-4 text-center mt-8">
-        <div class="logo-m12e">M12e</div>
-        
-        <nav class="nav-intervention">
-            <a href="#preambulo" class="nav-link">Preámbulo</a>
-            <a href="#resumen" class="nav-link">Resumen</a>
-            <a href="#cronologia" class="nav-link">Cronología</a>
-            <a href="#escalada" class="nav-link">Escalada</a>
-            <a href="#narrativas" class="nav-link">Narrativas</a>
-            <a href="#fetiches" class="nav-link">Fetiches</a>
-            <a href="#escenarios" class="nav-link">Escenarios</a>
-            <a href="#paradoja" class="nav-link">Paradoja</a>
-            <a href="#articulo" class="nav-link">Artículos</a>
-        </nav>
-    </header>
+<header class="max-w-6xl mx-auto px-4 text-center mt-8">
+    <div class="logo-m12e">M12e</div>
+</header>
 
-    <main class="max-w-6xl mx-auto px-4 mt-12">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            
-            <div class="lg:col-span-8">
-                <span class="kicker-analisis">Análisis de alta densidad [R⊕10⊕T⊕P⊕A] ∘ M ∘ B4 ∘ B7</span>
-                <h2 class="titulo-demanda">La guerra invisible: cronología de una disuasión fallida entre Estados Unidos e Irán</h2>
-                <p class="balazo-orden">"El conflicto no se declara, se densifica: cada ataque es un capítulo de una misma novela de agotamiento estratégico."</p>
+<main class="max-w-6xl mx-auto px-4 mt-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
 
-                <div id="contenedor-foto">
-                    <div class="photo-placeholder">
-                        <!-- =================================================== -->
-                        <!-- INSTRUCCIÓN: Reemplaza 'TU_IMAGEN.jpg' con el nombre  -->
-                        <!-- de tu archivo de imagen (ej. conflicto.jpg, foto.png) -->
-                        <!-- =================================================== -->
-                        <img src="TU_IMAGEN.jpg" alt="Análisis gráfico del conflicto Irán-EE.UU." style="width:100%; height:100%; object-fit: cover;" />
-                    </div>
-                    <p class="text-[10px] text-gray-400 text-right uppercase mt-2">Agencia M12e · Inteligencia Situada · Fuente: [Nombre de tu imagen]</p>
-                </div>
+<div class="lg:col-span-8">
 
-                <div class="analisis-texto mt-12" id="preambulo">
-                    <!-- ========== PREÁMBULO ========== -->
-                    <h3>Preámbulo: la topología del conflicto</h3>
-                    <p>La relación entre Estados Unidos e Irán no es una guerra convencional con frentes definidos, sino un sistema complejo de acciones y reacciones que se extiende por más de cuatro décadas. Desde la Revolución Islámica de 1979, ambos países han operado en un umbral de hostilidad que oscila entre la confrontación proxy y el ataque directo. El año 2026 se presenta como un punto de inflexión: las capacidades militares de Irán han alcanzado madurez tecnológica (misiles hipersónicos Fattah, drones Shahed-136 de quinta generación) mientras que EE.UU. reconfigura su presencia en Oriente Medio tras la retirada de Afganistán y el reequilibrio hacia el Indo-Pacífico. La coyuntura actual (1 de marzo de 2026) no es una escalada más, sino la <strong>segunda guerra interestatal en ocho meses</strong> entre Irán y la coalición liderada por EE.UU., con un cambio cualitativo: Washington actúa ahora como beligerante principal y ha declarado explícitamente el objetivo de cambio de régimen.</p>
+<span class="kicker-analisis">Análisis de alta densidad</span>
+<h2 class="titulo-demanda">La guerra invisible</h2>
 
-                    <!-- ========== RESUMEN ========== -->
-                    <h3 id="resumen">Resumen densimétrico</h3>
-                    <p>Entre 2020 y 2026, la conflictividad ha pasado de una fase de ataques selectivos (asesinato de Soleimani, represalias iraníes contra bases en Irak) a una guerra de desgaste multidominio. Irán ha consolidado un arco de influencia que va desde el Mediterráneo hasta el Golfo, utilizando milicias chiíes en Siria, Irak y Yemen como multiplicadores de fuerza. EE.UU. ha respondido con sanciones extremas y ataques quirúrgicos. Sin embargo, la línea roja nuclear ha sido cruzada retóricamente: Irán enriquece uranio al 84%, cerca del 90% necesario para un arma. La geometría de alianzas se ha reconfigurado: China y Rusia actúan como paraguas estratégico de Teherán, mientras Israel opera como socio de ataque de EE.UU. y las monarquías del Golfo quedan atrapadas como plataformas logísticas vulnerables.</p>
+<p class="balazo-orden">
+"El conflicto no se declara, se densifica."
+</p>
 
-                    <!-- ========== CRONOLOGÍA ========== -->
-                    <h3 id="cronologia">Cronología estratificada (2020–2026)</h3>
-                    <p><strong>2020:</strong> Operación Martir Soleimani (ataque estadounidense con drones en Bagdad) seguida de la represalia iraní con misiles balísticos contra la base de Ain al-Asad.</p>
-                    <p><strong>2021:</strong> Conversaciones de Viena para el retorno al JCPOA. Estancamiento. Aumento de ataques contra buques vinculados a Israel en el Golfo de Omán.</p>
-                    <p><strong>2022:</strong> Protestas internas en Irán (Movimiento Mujer, Vida, Libertad) desvían recursos de seguridad. EE.UU. acusa a Irán de suministrar drones a Rusia.</p>
-                    <p><strong>2023:</strong> Escalada naval: Irán intenta apoderarse de petroleros británicos y estadounidenses. EE.UU. despliega el USS Bataan en el Golfo.</p>
-                    <p><strong>2024:</strong> Israel ataca el consulado iraní en Damasco; Irán responde con un ataque directo sin precedentes desde su territorio (misiles y drones) contra Israel. En junio, Israel lanza la Operación "Martillo de Medianoche" con apoyo limitado de EE.UU., destruyendo las instalaciones nucleares de Natanz y Fordow en una guerra de 12 días.</p>
-                    <p><strong>2025:</strong> Elecciones presidenciales en Irán ganadas por un conservador pragmático. En octubre, milicias proiraníes atacan la embajada de EE.UU. en Bagdad. Durante todo el año, Irán reconstruye su programa de misiles y recibe componentes norcoreanos.</p>
-                    <p><strong>2026 (enero-febrero):</strong> Derribo de un dron estadounidense MQ-9 Reaper sobre el Golfo y explosión en Natanz. El 28 de febrero, EE.UU. e Israel lanzan una oleada masiva de ataques aéreos contra Teherán y el oeste de Irán, buscando desmantelar las defensas aéreas estratégicas. Irán responde con la Operación "Promesa Verdadera 4": ataques con misiles balísticos contra 14 bases estadounidenses en Bahréin, Qatar, EAU y Kuwait, impactando el cuartel general de la Quinta Flota y radares críticos.</p>
+<!-- CARGA DINÁMICA DE IMAGEN -->
+<div class="photo-placeholder">
+    <img id="imagen-principal" style="width:100%; height:100%; object-fit:cover; display:none;">
+    <span id="texto-placeholder">Agregar imagen</span>
+</div>
 
-                    <!-- ========== ESCALADA ========== -->
-                    <h3 id="escalada">Escalada: umbrales, mecanismos y capacidades actuales</h3>
-                    <p>La teoría de la escalada aplicada al conflicto irano-estadounidense revela una estructura de "guerra de umbrales". Cada acción busca modificar el statu quo sin desencadenar una respuesta masiva. La asimetría híbrida combina drones, misiles de crucero y ciberataques como herramientas de desgaste. En 2026, ambos actores han normalizado el enfrentamiento directo de baja intensidad, pero la guerra actual ha roto ese molde.</p>
-                    <p><strong>Capacidades de la coalición EE.UU.-Israel:</strong> La acumulación de fuerzas es masiva: dos portaaviones (<em>Gerald R. Ford</em> y <em>Abraham Lincoln</em>) con F-35C, cazas F-22 y F-15E en bases terrestres, bombarderos B-2 para ataques estratégicos, y destructores lanzando Tomahawk. Sin embargo, el talón de Aquiles es la <strong>profundidad de magazine defensivo</strong>: las existencias de interceptores THAAD, SM-3 y Patriot están críticamente bajas tras el consumo en la guerra de 2024; la producción de SM-3 es de apenas 12 unidades al año. Esto limita la capacidad de proteger bases y aliados contra salvas múltiples.</p>
-                    <p><strong>Capacidades de Irán:</strong> Irán apuesta a la asimetría y saturación. Posee el arsenal de misiles balísticos más grande de la región: desde Shahab-1 hasta el hipersónico Fattah-2, diseñado para saturar sistemas THAAD y Arrow-3. Además, dispone de drones Shahed-136 y misiles de crucero Soumar. Su principal arma estratégica es la amenaza de cerrar el Estrecho de Ormuz (20% del petróleo mundial), aunque aún no la ha ejecutado. Tras la guerra de 2024, sus defensas aéreas (S-300) quedaron degradadas, pero ha reaparecido con lanzadores sin radares y ha repuesto su arsenal ofensivo.</p>
-                    <p><strong>El rol de aliados globales:</strong> China condena la "aventura peligrosa" pero no intervendrá militarmente; su prioridad es la estabilidad energética. Rusia capitaliza el desgaste estadounidense, desviando atención de Ucrania y beneficiándose del alza del petróleo, aunque su capacidad de intervención es nula por la guerra en curso.</p>
+<input type="file" id="cargar-imagen" accept="image/*" class="mt-2">
 
-                    <!-- ========== NARRATIVAS ========== -->
-                    <h3 id="narrativas">Narrativas en pugna: disuasión, cambio de régimen y resistencia</h3>
-                    <p>Dos grandes relatos chocan en este conflicto. Por un lado, la administración Trump (2026) ha reactivado la doctrina de "máxima presión" con un objetivo explícito de cambio de régimen, presentando la guerra como una liberación del pueblo iraní y una necesidad para la seguridad de Israel. Por otro lado, la narrativa de la República Islámica enfatiza la resistencia contra la arrogancia global (<em>istikbar</em>) y presenta a sus proxies como defensores de los santuarios chiíes. Las negociaciones indirectas en Ginebra (mediadas por Omán) fracasaron porque Irán ofrecía concesiones nucleares pero no negociar su programa de misiles ni su red regional, mientras EE.UU. exigía el desmantelamiento total de ambas. Las conversaciones fueron una fachada para el <em>surge</em> militar estadounidense.</p>
+<div class="analisis-texto mt-12">
+<h3>Preámbulo</h3>
+<p>Contenido del análisis...</p>
+</div>
 
-                    <!-- ========== FETICHES ========== -->
-                    <h3 id="fetiches">Fetiches derribados: mitos que colapsaron</h3>
-                    <p>El análisis permite identificar los fetiches que han caído. El primero es el <strong>fetiche de la disuasión convencional</strong>: se creía que la presencia de portaaviones bastaría para disuadir a Irán; los ataques de 2023-2025 demostraron que la disuasión es porosa. Segundo, el <strong>fetiche de que Irán no atacaría directamente a Israel</strong>: el ataque de abril de 2024 rompió ese tabú. Tercero, el <strong>fetiche de la invulnerabilidad de las bases del Golfo</strong>: los impactos del 28 de febrero de 2026 en Bahréin y Qatar evidencian que ningún aliado está a salvo. Cuarto, el <strong>fetiche de la superioridad tecnológica como garantía</strong>: la saturación con misiles hipersónicos ha expuesto los límites de los sistemas de defensa antimisiles, cuya reposición es lentísima.</p>
+</div>
 
-                    <!-- ========== ESCENARIOS ========== -->
-                    <h3 id="escenarios">Escenarios prospectivos a 2027</h3>
-                    <ul>
-                        <li><strong>1. Guerra limitada controlada (45%):</strong> Ataques selectivos mutuos que no escalan a conflicto abierto, manteniendo un umbral de violencia pero sin conquistas territoriales. Depende de que ambas partes conserven canales de comunicación (Omán, Suiza) y de que la fatiga de municiones no provoque un error de cálculo.</li>
-                        <li><strong>2. Explosión nuclear regional (15%):</strong> Irán realiza un ensayo nuclear subterráneo como respuesta a la destrucción de sus instalaciones, forzando a Israel y EE.UU. a una intervención masiva. Escenario de alto riesgo que llevaría a una guerra regional total.</li>
-                        <li><strong>3. Détente forzada por agotamiento (20%):</strong> Ambos bandos, tras consumir sus arsenales críticos (misiles ofensivos iraníes vs. interceptores estadounidenses), aceptan un alto el fuego negociado que congela el programa nuclear pero deja a Irán con capacidad de reconstrucción.</li>
-                        <li><strong>4. Guerra regional generalizada (20%):</strong> Un incidente mayor (cierre de Ormuz, hundimiento de un buque de guerra, ataque con víctimas masivas en Israel) desencadena ataques masivos contra infraestructura petrolera, ciudades y fuerzas estadounidenses, con probable intervención de proxies en Líbano, Siria y Yemen.</li>
-                    </ul>
+<div class="lg:col-span-4 border-l border-gray-100 pl-8">
 
-                    <!-- ========== PARADOJA ========== -->
-                    <h3 id="paradoja">La paradoja estratégica: magazine depth vs. saturación</h3>
-                    <p>La campaña no se decidirá por quién tiene mejor tecnología, sino por quién se queda sin munición primero. EE.UU. quema sus limitadas existencias de interceptores ante cada salva iraní. Irán, por su parte, está disparando su arsenal estratégico, pero su cálculo es de resistencia: si logra mantener un ritmo de fuego que vacíe los arsenales de THAAD y Patriot, las siguientes oleadas podrían saturar las defensas israelíes y estadounidenses. La producción industrial de misiles (tanto ofensivos iraníes como defensivos estadounidenses) es el campo de batalla real. Además, una paradoja política: el objetivo de cambio de régimen, si tuviera éxito, podría fragmentar Irán (un país multiétnico de 90 millones) en un escenario de pesadilla que ni EE.UU. ni sus aliados desean, mientras que la supervivencia del régimen lo dejaría militarmente más débil pero con su disuasión probada, y la opción nuclear, ahora físicamente destruida, podría ser ideológicamente reconsiderada (la lección de Libia pesa más que el alivio de sanciones).</p>
+<div class="bg-gray-50 p-5 border-l-4 border-red-700">
+<p class="text-[10px] font-black uppercase mb-2">Nota importante.</p>
+<p class="text-sm font-serif italic leading-snug">
+La frecuencia de incidentes directos aumentó un 300%.
+</p>
+</div>
 
-                    <!-- ========== ARTÍCULO ========== -->
-                    <h3 id="articulo">Artículo: La geometría variable de los aliados</h3>
-                    <p>China y Rusia, lejos de ser espectadores pasivos, configuran el tablero con su respaldo diplomático. Pekín observa con alarma: un conflicto prolongado disparará los precios de la energía, dañando su economía. Sus lazos con Irán son económicos (corredores de transporte, iniciativa de la Franja y la Ruta), no un pacto de defensa mutua. No habrá apoyo militar directo a Irán, pero sí respaldo en foros como la ONU. Moscú, en cambio, se beneficia estratégicamente: la guerra desvía la atención de Ucrania, dificulta las conversaciones de paz y tensiona las reservas de misiles interceptores que Ucrania necesita (Patriot). Además, una subida del precio del petróleo por el cierre de Ormuz favorece sus ingresos energéticos. Sin embargo, su capacidad de intervención militar es nula (atada a Ucrania), y sus intereses regionales (influencia post-Asad) están en riesgo. Los aliados del Golfo (GCC) son los más vulnerables: albergan bases críticas de EE.UU. y han sido objetivo directo de la represalia iraní. Su posición es de máxima vulnerabilidad y podrían presionar por un cese al fuego.</p>
-                    <p>En síntesis, estamos ante una guerra de desgaste de segunda fase. EE.UU. apuesta a la velocidad y la decapitación; Irán apuesta a la profundidad de su arsenal y a la saturación de las defensas enemigas. El resultado inmediato depende de la resistencia logística de ambos bandos, mientras China y Rusia capitalizan el desgaste estadounidense desde la retaguardia diplomática.</p>
-                </div>
-            </div>
+<div class="mt-16 pt-8 border-t border-gray-200 text-center">
 
-            <div class="lg:col-span-4 border-l border-gray-100 pl-8">
-                <h3 class="text-xs font-black uppercase border-b-2 border-black pb-1 mb-8">Contenidos del Análisis</h3>
-                
-                <div class="space-y-10">
-                    <div class="flex gap-4">
-                        <span class="rank-num">01</span>
-                        <a href="#fetiches" class="text-sm font-bold leading-tight hover:text-red-700">
-                            Uno de los fetiches derribados: El mito de la disuasión por portaaviones
-                        </a>
-                    </div>
-                    
-                    <div class="flex gap-4">
-                        <span class="rank-num">02</span>
-                        <a href="#escenarios" class="text-sm font-bold leading-tight hover:text-red-700">
-                            Lo que se espera que venga: Prospectiva técnica — dominio de drones hipersónicos
-                        </a>
-                    </div>
+<p class="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-3">
+Visitas al Nodo
+</p>
 
-                    <div class="bg-gray-50 p-5 border-l-4 border-red-700">
-                        <p class="text-[10px] font-black uppercase mb-2">Dato relevante</p>
-                        <p class="text-sm font-serif italic leading-snug">
-                            La frecuencia de incidentes directos aumentó un 300% entre 2023 y 2026, evidenciando una zona gris que normaliza la violencia sin declaración formal. La producción de interceptores SM-3 es de apenas 12 unidades al año, mientras Irán puede fabricar cientos de misiles balísticos anualmente.
-                        </p>
-                    </div>
-                </div>
+<div id="contador" class="font-mono text-2xl bg-black text-white px-4 py-1 inline-block mb-8">
+0000000
+</div>
 
-                <div class="mt-16 pt-8 border-t border-gray-200 text-center">
-                    <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-3">Visitas al Nodo</p>
-                    <div class="font-mono text-2xl bg-black text-white px-4 py-1 inline-block mb-8">0000432</div>
-                    
-                    <a href="https://www.youtube.com/@m12eradio31" target="_blank" class="block group">
-                        <div class="flex items-center justify-center gap-3 text-[11px] font-black group-hover:text-red-700">
-                            <span class="w-3 h-3 bg-red-600 rounded-full animate-pulse"></span>
-                            M12E RADIO 31 EN VIVO
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </main>
+<a href="https://www.youtube.com/@m12eradio31" target="_blank" class="youtube-button">
+Ir a M12E Radio 31
+</a>
 
-    <footer class="mt-24 border-t border-black py-12 text-center">
-        <div class="logo-m12e text-2xl mb-4">M12e</div>
-        <p class="text-[10px] text-gray-400 uppercase tracking-widest">México · 2026 · Nodo de Inteligencia Digital</p>
-    </footer>
+</div>
+</div>
+</div>
+</main>
+
+<footer class="mt-24 border-t border-black py-12 text-center">
+<div class="logo-m12e text-2xl mb-4">M12e</div>
+<p class="text-[10px] text-gray-400 uppercase tracking-widest">
+México · Nodo de Inteligencia Digital
+</p>
+</footer>
+
+<script>
+// FECHA AUTOMÁTICA
+const fechaElemento = document.getElementById("fecha-actual");
+const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+const fecha = new Date().toLocaleDateString('es-ES', opciones);
+fechaElemento.textContent = fecha.charAt(0).toUpperCase() + fecha.slice(1);
+
+// CONTADOR REAL (LOCAL)
+let visitas = localStorage.getItem("contadorM12e");
+if (!visitas) {
+    visitas = 1;
+} else {
+    visitas = parseInt(visitas) + 1;
+}
+localStorage.setItem("contadorM12e", visitas);
+document.getElementById("contador").textContent = visitas.toString().padStart(7, '0');
+
+// CARGA DINÁMICA DE IMAGEN
+document.getElementById("cargar-imagen").addEventListener("change", function(event) {
+    const archivo = event.target.files[0];
+    if (archivo) {
+        const lector = new FileReader();
+        lector.onload = function(e) {
+            const img = document.getElementById("imagen-principal");
+            img.src = e.target.result;
+            img.style.display = "block";
+            document.getElementById("texto-placeholder").style.display = "none";
+        }
+        lector.readAsDataURL(archivo);
+    }
+});
+</script>
 
 </body>
 </html>
