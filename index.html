@@ -150,6 +150,53 @@
         }
         .article-content { font-size: 18px; line-height: 1.8; }
 
+        /* === TABLAS DE RASTREO === */
+        .tabla-agencias, .tabla-subjetividad {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            border: 1px solid #ddd;
+        }
+        .tabla-agencias th, .tabla-subjetividad th {
+            background-color: #111;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 13px;
+        }
+        .tabla-agencias td, .tabla-subjetividad td {
+            padding: 15px 12px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+        .tabla-agencias tr:last-child td, .tabla-subjetividad tr:last-child td {
+            border-bottom: none;
+        }
+        .tabla-agencias tr:hover, .tabla-subjetividad tr:hover {
+            background-color: #f9f9f9;
+        }
+        .tabla-agencias td:first-child, .tabla-subjetividad td:first-child {
+            font-weight: bold;
+            width: 20%;
+        }
+        .tabla-agencias td:nth-child(2) {
+            width: 20%;
+            color: #555;
+        }
+        .nota-metodologica {
+            background-color: #f4f4f4;
+            border-left: 4px solid #c00;
+            padding: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #333;
+        }
+
         /* === COMENTARIOS Y FOOTER === */
         .comentarios { margin-top: 60px; border-top: 3px double #ccc; padding-top: 30px; }
         .comentarios textarea {
@@ -206,7 +253,7 @@
     📢 <a href="#" style="text-decoration:none; color:inherit;">¡Nuevo análisis disponible!</a>
 </div>
 
-<img id="hero-img" src="" alt="Imagen Destacada" class="hero-image">
+<img id="hero-img" src="" alt="Buque de COSCO y bandera de Venezuela" class="hero-image">
 
 <div class="container" id="contenido-principal">
     <!-- Generado por JavaScript -->
@@ -217,7 +264,7 @@
 </footer>
 
 <script>
-    // === ARTÍCULO CON EL ANÁLISIS DIALÉCTICO ===
+    // === ARTÍCULO COMPLETO: RASTREO PRIMERO, ANÁLISIS DESPUÉS ===
     const ARTICULOS = [
         {
             id: 1,
@@ -225,36 +272,88 @@
             subtitulo: "Un análisis dialéctico de la contradicción interimperialista en Oriente Medio",
             fecha: "17 de marzo de 2026",
             autor: "Operador Analítico [R⊕10⊕T⊕P⊕A] ∘ M ∘ B4 ∘ B7 ∘ V.E. ∘ X8",
-            heroImage: "https://www.shutterstock.com/image-photo/container-ship-chinese-cosco-shipping-600nw-2573314583.jpg",
+            // ===== LA FOTO DEL BARCO CON COSCO =====
+            heroImage: "https://diariodecuba.com/sites/default/files/images/2026-01/china-venezuela-petroleo.png",
+            // ========================================
             secciones: [
+                // --- 1. RASTREO DE AGENCIAS (AHORA PRIMERO) ---
+                {
+                    id: "agencias",
+                    meta: "I. RASTREO DE AGENCIAS",
+                    titulo: "Análisis de las expresiones fenoménicas del capital",
+                    contenido: `
+                        <p>A continuación, se presenta el análisis de las agencias informativas, entendidas no como "fuentes" neutrales, sino como expresiones de determinadas fracciones de capital y proyectos políticos en pugna.</p>
+                        <table class="tabla-agencias">
+                            <thead>
+                                <tr><th>Agencia</th><th>Región/Función</th><th>Análisis del Material Rastreado (Coyuntura Marzo 2026)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>AP / Reuters</td><td>Global (Centro/Liberal)</td><td>La cobertura se centra en la "desestabilización" y el "caos". La narrativa dominante es la de un mundo que se "fragmenta". La guerra se presenta como un evento meteorológico, despojado de sus determinaciones de clase. El límite de lo decible lo marca el miedo a nombrar al verdadero sujeto: el capital financiero estadounidense que necesita la guerra para sostener la tasa de ganancia y la supremacía del dólar. La noticia de que China "presiona" para que la visita de Trump continúe se enmarca en el cliché de la "rivalidad", sin analizar la co-dependencia estructural que obliga a ambas partes a mantener la farsa del diálogo mientras se aniquilan mutuamente en otros terrenos.</td></tr>
+                                <tr><td>Xinhua / China-Embassy</td><td>China (Izquierda de Estado)</td><td>La voz del capitalismo de Estado chino es quirúrgicamente precisa. Sus comunicados no son meras declaraciones; son actos de posicionamiento en la correlación de fuerzas. Al condenar las "violaciones del derecho internacional" y abogar por el cese al fuego, China no habla desde una inocente "paz mundial", sino que construye la imagen de la "responsabilidad" que necesita para atraer capitales y alianzas. La ayuda humanitaria a Irán, Jordania, Líbano e Irak es la forma fenoménica de una operación mucho más profunda: la compra de lealtades y la construcción de una red de Estados clientes mediante la deuda y la infraestructura, no mediante misiles. Es la acumulación por otros medios.</td></tr>
+                                <tr><td>Prensa Latina</td><td>Cuba/LatAm (Izquierda antiimperialista)</td><td>Su función de contraste es vital. Si hubiera estado, habría recordado que la lucha antiimperialista no es una competencia entre grandes potencias, sino la autodeterminación de los pueblos. Su ausencia en el discurso global sobre la guerra es la prueba de que la memoria histórica ha sido sepultada por la nueva razón de Estado: hoy se negocia con el dios Mercado, no con la historia de los oprimidos.</td></tr>
+                                <tr><td>Sputnik / TASS</td><td>Rusia (Derecha nacionalista)</td><td>La estrategia de la burguesía rusa es clara: observar cómo EEUU se desangra en un conflicto prolongado. Su discurso se enfoca en el "día en que Israel perdió a América", una metáfora que oculta su propio deseo: que el imperialismo rival se fracture internamente, abriendo espacio para su propia recomposición regional.</td></tr>
+                                <tr><td>EFE / AFP</td><td>Europa (Centro/Socialdemócrata)</td><td>La desesperación de la socialdemocracia europea es palpable. Alemania, España, Francia e Italia diciendo "no es nuestra guerra" es la confesión de una clase política que descubre, horrorizada, que ha perdido todo margen de maniobra. Atrapados entre la lealtad a la OTAN (léase: la sumisión al capital estadounidense) y el suicidio económico que implica la guerra (energía, refugiados, inflación), solo atinan a gemir débilmente. La petición a Israel de que no invada Líbano es el último estertor de una conciencia moral que ya no tiene base material.</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="nota-metodologica">
+                            <strong>Nota metodológica:</strong> Ninguna de estas voces es "la verdad". Todas deben ser sometidas al análisis de clase, identificando la fracción que representan, sus contradicciones internas y la distancia entre su decir y su hacer material.
+                        </div>
+                    `
+                },
+                // --- 2. RASTREO DE SUBJETIVIDAD ESTATAL ---
+                {
+                    id: "subjetividad",
+                    meta: "II. RASTREO DE LA SUBJETIVIDAD ESTATAL",
+                    titulo: "Las voces del poder y su materialidad",
+                    contenido: `
+                        <p>Sistematización de las declaraciones y posicionamientos oficiales de los actores determinantes en la coyuntura.</p>
+                        <table class="tabla-subjetividad">
+                            <thead>
+                                <tr><th>Categoría</th><th>Actores a rastrear</th><th>Análisis de las Voces Rastreadas</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Potencia hegemónica</td><td>EE.UU.: Departamento de Estado, Casa Blanca, Pentágono, Reserva Federal, Congreso</td><td>La voz de Trump es la del capital financiero en su fase más depredadora y consciente de su propia decadencia. Sus declaraciones son un monumento a la reificación: pide a otros países que se unan "con entusiasmo" a patrullar el estrecho, y al mismo tiempo condiciona su visita a China a que Pekín colabore en la apertura de esa ruta. El cinismo es la forma ideológica de la coerción. Detrás de la bravuconada ("esto es un tigre de papel"), se esconde el pánico: la Reserva Federal atrapada entre la inflación y el estancamiento, y un complejo militar-industrial que exige su cuota de sangre para mantener los dividendos. La orden de atacar Irán no fue un error; fue la respuesta de una fracción de clase que prefiere el Apocalipsis a la pérdida de su hegemonía.</td></tr>
+                                <tr><td>Potencias rivales</td><td>China: Ministerio de Exteriores, Departamento de Publicidad del PCCh, voceros oficiales. Rusia: Ministerio de Exteriores, Consejo de Seguridad, portavoces de poder.</td><td>El Partido-Estado chino opera con una lógica de larga duración. Mientras su portavoz Lin Jian "toma nota" de las aclaraciones de Trump y mantiene la comunicación para la visita, su embajador en la ONU califica los ataques de "shockeantes" y su enviado especial gira por Arabia Saudita. Esta es la dialéctica del capitalismo de Estado: mantener abierto el canal diplomático con el agresor mientras se teje la red de alianzas de los agredidos. La llamada de Wang Yi a Israel es la pieza más sutil: al exigir la protección de los ciudadanos chinos, le recuerda a Tel Aviv que Pekín tiene intereses y, por tanto, también tiene capacidad de veto o de facilitación en el futuro. China no elige bando en la guerra; elige posicionarse en la nueva configuración de fuerzas que surgirá después de la guerra.</td></tr>
+                                <tr><td>Potencias regionales emergentes</td><td>Brasil, India, Sudáfrica, Turquía, Irán, etc. (Cancillerías, presidencias, posiciones en BRICS, OCS, etc.)</td><td>Los Emiratos interceptando misiles, Qatar haciendo lo propio, Arabia Saudita negando el uso de su espacio aéreo. La voz de las monarquías del Golfo es la del capital que huye del fuego cruzado. Son los verdaderos "neutrales" por necesidad: su supervivencia depende de no enfadar al hegemón decadente que aún tiene bases en su territorio, ni al gigante asiático que les compra el petróleo y les vende seguridad. Su discurso es el silencio o la declaración técnica ("hemos interceptado un objeto"). Es la política del miedo.</td></tr>
+                                <tr><td>Estado-nación del conflicto</td><td>Irán: Presidencia, ministerios clave (Economía, Interior, Defensa, Desarrollo Social), poder legislativo, judicial, fuerzas armadas</td><td>Su voz llega deformada por el ruido de la guerra. Pero sus actos hablan: atacar la embajada de EEUU en Irak, disparar contra Israel, amenazar el estrecho. Es la respuesta de un Estado que ha visto morir a su líder y que sabe que lucha por su supervivencia. Su estrategia declarada de convertir el conflicto en "prolongado" no es una opción, es una confesión de su debilidad relativa: no puede vencer, pero puede desgastar. Al hablar de cobrar el petróleo en yuanes, Irán emite el mensaje más claro a China: "nosotros ponemos los muertos, usted ponga el sistema financiero alternativo".</td></tr>
+                                <tr><td>Movimientos populares</td><td>Sindicatos, organizaciones campesinas, movimientos territoriales, plataformas de derechos humanos (comunicados, pliegos, declaraciones de dirigentes)</td><td>No hay voz directa en los resultados. Solo el dato de más de un millón de desplazados en Líbano. El pueblo, en esta guerra, no habla: es hablado por los misiles. Su subjetividad solo se expresa en el acto desesperado de huir o, en el caso de los reclutas de las milicias, en la decisión de morir. Esta ausencia es el dato más brutal de la correlación de fuerzas: las clases dominadas de Medio Oriente son el combustible de una guerra que deciden otros. La dirección histórica, por ahora, no la escriben ellos.</td></tr>
+                            </tbody>
+                        </table>
+                    `
+                },
+                // --- 3. APERTURA ---
                 {
                     id: "apertura",
-                    meta: "I. APERTURA FENOMENOLÓGICA",
+                    meta: "III. APERTURA FENOMENOLÓGICA",
                     titulo: "Lo que salta a la vista",
                     contenido: "<p>Lo que salta a la vista, lo que nos grita desde las pantallas, es el caos. Misiles sobre Beirut y Teherán, drones sobre Bagdad, el humo elevándose sobre una embajada estadounidense en llamas. La imagen que ilustra este análisis —un portacontenedores chino navegando aguas aparentemente tranquilas— contrasta brutalmente con la noticia de que más de un millón de libaneses han huido de sus hogares. La apariencia inmediata del conflicto es la de un choque de civilizaciones, una guerra santa, una reacción en cadena de odios milenarios. Israel bombardea, Irán retaliaría, Estados Unidos se ve arrastrado. Parece una tragedia. Pero en la superficie del fenómeno, las cosas nunca son lo que parecen.</p>",
                     balazo: "Lo que estamos presenciando no es un desorden, sino la dolorosa y violenta reordenación del mundo. El caos es el parto de un nuevo orden."
                 },
+                // --- 4. RUPTURA ---
                 {
                     id: "ruptura",
-                    meta: "II. RUPTURA DE LA PSEUDOCONCRECIÓN",
+                    meta: "IV. RUPTURA DE LA PSEUDOCONCRECIÓN",
                     titulo: "La sangre y los dólares",
                     contenido: "<p>Detengámonos en esa imagen del barco. No es una postal de la paz. Es la prueba material de que, mientras el fuego consume Oriente Medio, las ruedas del capital global siguen girando. Más aún: el fuego está engrasando esas ruedas para una fracción del capital, mientras las quema para otra. La guerra no es un error, no es una locura. Es la continuación de los negocios por otros medios. El presidente Trump, desde Washington, exige a sus aliados que se unan 'con entusiasmo' a patrullar el Estrecho de Ormuz, y al mismo tiempo sugiere que la visita a Pekín podría depender de que China ayude a abrirlo. La conexión es obscena en su claridad: la sangre que se derrama en Teherán y los dólares que fluyen hacia Shanghái y Washington son la misma sustancia.</p>"
                 },
+                // --- 5. NUDO DIALÉCTICO ---
                 {
                     id: "nudo",
-                    meta: "III. NUDO DIALÉCTICO",
+                    meta: "V. NUDO DIALÉCTICO",
                     titulo: "Coerción y seducción: las dos caras del capital",
                     contenido: "<p>La contradicción central que organiza esta masacre no es entre judaísmo e islam, ni siquiera entre Estados Unidos e Irán. Es la contradicción interimperialista entre dos modelos de acumulación de capital en su fase de crisis terminal.</p><p>Por un lado, tenemos al capital financiero-especulativo encarnado en el complejo militar-industrial de Estados Unidos y su apéndice, el Estado de Israel. Su estrategia es la de la <em>coerción directa</em>. Necesita la guerra para mantener la primacía del dólar petrolero, para justificar un presupuesto de defensa que alimenta a sus corporaciones y para disciplinar a cualquier periferia que ose negociar su autonomía. Pero su discurso, el de la 'defensa de la democracia', se resquebraja. Sus propios aliados europeos se desmarcan. La hegemonía estadounidense, basada en el consentimiento, se ha transformado en pura dominación militar, y la dominación, cuando es el único recurso, es el síntoma inequívoco de la decadencia.</p><p>Por otro lado, tenemos al capitalismo de Estado chino. Su estrategia es la de la <em>seducción estructural</em>. Mientras Estados Unidos quema su poderío en bombas, China acumula poderío en contratos, rutas y reservas de divisas. No necesita invadir Irán; le basta con comprar su petróleo con descuento, ofrecerle una red de seguridad financiera en el BRICS y la OCS, y presentarse como el 'garante de la estabilidad'. Su discurso de paz no es pacifismo; es la forma ideológica que adopta su interés de clase: necesita que el flujo de mercancías no se interrumpa para que su modelo de acumulación, basado en la producción real y la exportación, no colapse.</p><p>Aquí se inserta la guerra como mediación. El conflicto prolongado en Oriente Medio es el crisol donde estas dos lógicas se funden y chocan: <strong>Para Estados Unidos</strong>, la guerra es una trampa. Debe sostenerla para no mostrar debilidad, pero cada misil disparado es un dólar que no se invierte en infraestructura, un aliado que se distancia y una porción mayor del comercio global que busca refugio en el yuan o en el oro. <strong>Para China</strong>, la guerra es una oportunidad histórica. El miedo al fuego empuja al capital europeo y del Golfo a buscar puertos seguros. La necesidad de rutas energéticas alternativas acelera la construcción de los corredores terrestres, materializando la vieja aspiración de esquivar el dominio naval estadounidense. La guerra, así, actúa como un gigantesco acelerador de la historia: fuerza la 'desglobalización' del bloque occidental para forzar la 'reglobalización' en torno al eje asiático.</p><p>La correlación de fuerzas, en este momento, es de un <em>equilibrio inestable que favorece la tendencia china</em>. Estados Unidos está a la ofensiva militar, pero a la defensiva estratégica. Sus golpes son letales, pero no definen el futuro. China está a la defensiva diplomática (evitando la condena directa que rompa sus puentes con Occidente), pero a la ofensiva histórica. Cada día que pasa, la nueva arquitectura financiera y comercial se consolida un poco más en la sombra del conflicto.</p>"
                 },
+                // --- 6. CLÍMAX ---
                 {
                     id: "climax",
-                    meta: "IV. CLÍMAX DE ADVERTENCIA",
+                    meta: "VI. CLÍMAX DE ADVERTENCIA",
                     titulo: "La nueva servidumbre",
                     contenido: "<p>El peligro inminente que la pseudoconcreción oculta no es solo una escalada nuclear. Es la consolidación de una nueva forma de servidumbre. Mientras nosotros miramos el baile de los misiles, las potencias renegocian los términos de nuestra dependencia. Si la guerra se prolonga, Europa se convertirá en un apéndice irrelevante, condenado a pagar la energía al precio que fije la geopolítica. Estados Unidos, si persiste en su locura, podría implosionar por dentro, llevándose consigo el sistema financiero global en su caída. Pero China, que observa desde la distancia calculada, no construye un paraíso. Construye un nuevo centro de gravedad. Y en ese nuevo centro, las reglas las pondrá el capital, con un rostro burocrático y una sonrisa de 'cooperación win-win'. La advertencia es clara: el fin de la hegemonía estadounidense no es el fin del capitalismo. Es su metamorfosis.</p>"
                 },
+                // --- 7. CIERRE DE PRAXIS ---
                 {
                     id: "cierre",
-                    meta: "V. CIERRE DE PRAXIS",
+                    meta: "VII. CIERRE DE PRAXIS",
                     titulo: "Ni misil ni contrato",
                     contenido: "<p>Para la clase trabajadora global, para los pueblos de Irán, Líbano, Palestina y de todo el mundo, la dirección estratégica no puede ser elegir entre el misil estadounidense y el contrato de inversión chino. Esa es la falsa elección que la burguesía de ambos bandos nos ofrece. La praxis, aquí, consiste en desgarrar el velo de esa falsa contradicción: no se trata de 'apoyar a China contra el imperialismo yanqui', porque el Estado chino es <em>otra forma</em> de dominación de clase, no su antítesis.</p><p>La tarea es, ante todo, cognitiva: entender que nuestra liberación no vendrá del triunfo de uno de estos gigantes sobre el otro. Vendrá de la capacidad de organizarnos <em>contra</em> ambos, de aprovechar las grietas que esta guerra interimperialista abre para construir poder popular autónomo. La lucha no es por qué polo de la burguesía global dominará el siglo XXI. La lucha es por construir un mundo donde el valor de la vida de un desplazado libanés no sea calculado en la pizarra de un fondo de inversión en Hong Kong o en el presupuesto del Pentágono. El umbral de ruptura histórico no lo marcarán los generales, sino la conciencia de que ni el misil ni el contrato nos representan. Esa conciencia, por ahora, es solo una semilla bajo el fuego. Pero es la única que puede dar un fruto distinto al humo y la ceniza.</p>"
                 }
@@ -276,7 +375,7 @@
         art.secciones.forEach(sec => {
             const link = document.createElement('a');
             link.href = `#${sec.id}`;
-            // Extraer el número romano (I, II, III, etc.) para el menú
+            // Extraer el número romano (I, II, III, IV, V, VI, VII)
             const romano = sec.meta.split('.')[0];
             link.textContent = romano;
             menu.appendChild(link);
