@@ -3,7 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ========== ETIQUETAS OPEN GRAPH PARA REDES SOCIALES ========== -->
+    <meta property="og:title" content="M12e Puebla · El Costo Imperial: Guerra, Pobreza y la Barbarie del Capital">
+    <meta property="og:description" content="Un portaaviones en el Golfo, la maquinaria de muerte y el precio que paga la clase trabajadora en el corazón del imperio. Análisis completo: el costo militar por segundo, minuto, hora, día, semana, mes y año, y cuántas personas podrían salir de la pobreza con ese dinero.">
+    <meta property="og:url" content="https://m12eradio-ui.github.io/">
+    <meta property="og:image" content="https://c.files.bbci.co.uk/481E/production/_100426481_gettyimages-912839046-1.jpg">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="M12e Puebla">
+    <meta property="article:published_time" content="2026-03-20">
+    <meta property="article:author" content="Redacción RadioM12e · Antonio Sánchez Ballinas">
+    
+    <!-- ========== ETIQUETAS PARA TWITTER ========== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="El Costo Imperial: Guerra, Pobreza y la Barbarie del Capital">
+    <meta name="twitter:description" content="El análisis completo del costo militar estadounidense y lo que se podría hacer con ese dinero en educación, salud y vivienda.">
+    <meta name="twitter:image" content="https://c.files.bbci.co.uk/481E/production/_100426481_gettyimages-912839046-1.jpg">
+    
     <title>M12e Puebla · El Costo Imperial: Guerra, Pobreza y la Barbarie del Capital</title>
+    
     <style>
         /* === RESET Y ESTILOS GENERALES === */
         * {
@@ -237,7 +255,7 @@
 </footer>
 
 <script>
-    // ========== BASE DE DATOS DEL ANÁLISIS: "EL COSTO IMPERIAL: GUERRA, POBREZA Y LA BÁRBARIE DEL CAPITAL" ==========
+    // ========== BASE DE DATOS DEL ANÁLISIS ==========
     const ARTICULOS = [
         {
             id: 1,
@@ -330,17 +348,13 @@
         }
     ];
 
-    // === LÓGICA DE RENDERIZADO ===
     function cargarArticulo(index) {
         const art = ARTICULOS[index];
         const container = document.getElementById('contenido-principal');
         const menu = document.getElementById('menu-navegacion');
-        
-        // Actualizar Imagen Hero con la imagen proporcionada
         const heroImg = document.getElementById('hero-img');
         if (heroImg) heroImg.src = art.heroImage;
         
-        // Limpiar y Generar Menú dinámico con los ID de cada sección
         menu.innerHTML = "";
         art.secciones.forEach(sec => {
             const link = document.createElement('a');
@@ -349,7 +363,6 @@
             menu.appendChild(link);
         });
 
-        // Generar Contenido + créditos del director como autor fijo
         let html = `
             <div class="autor-destacado">
                 ✍️ ${art.autor} | ${art.fecha}
@@ -369,7 +382,6 @@
             `;
         });
 
-        // Añadir caja de comentarios simbólica
         html += `
             <div class="comentarios">
                 <h2>Comentarios y debate</h2>
@@ -382,10 +394,8 @@
         container.innerHTML = html;
     }
 
-    // Iniciar con el artículo único
     window.onload = () => {
         cargarArticulo(0);
-        // Ajuste de banner para no tener conflictos
         const bannerLink = document.getElementById('banner-link');
         if(bannerLink) bannerLink.addEventListener('click', (e) => {
             e.preventDefault();
